@@ -1,5 +1,5 @@
 import React from "react";
-import testImg from "../../Images/anne-nygard-bGYGmkLlgbA-unsplash.jpg";
+import testImg from "../../Images/Flag_of_Nepal.svg.png";
 import { Link } from "react-router-dom";
 const JustForYou = () => {
   return (

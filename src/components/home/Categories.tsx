@@ -1,5 +1,5 @@
 import React from "react";
-import testImg from "../../Images/nathan-dumlao-5Hl5reICevY-unsplash.jpg";
+import testImg from "../../Images/mastercard.png";
 const Categories = () => {
   return (
     <>

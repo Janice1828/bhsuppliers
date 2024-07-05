@@ -1,5 +1,5 @@
 import React from "react";
-import testImg from "../../Images/nathan-dumlao-LPRrEJU2GbQ-unsplash.jpg";
+import testImg from "../../Images/Flag_of_Nepal.svg.png";
 const Darazmall = () => {
   return (
     <>

@@ -56,3 +56,58 @@
   border-radius: 10px;
   color: rgb(33, 33, 33);
 }
+.footer-links {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.footer-links-header {
+  font-size: 20px;
+  color: rgb(248, 86, 6);
+  line-height: 28px;
+  font-weight: 400;
+}
+.footer-countries-flag {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.payment-methods {
+  height: 28px;
+  width: 48px;
+  object-fit: contain;
+  background: #fff;
+  padding: 5px;
+}
+.footer-verifiedby-img {
+  height: 40px;
+  background: #fff;
+}
+.getiton-stores {
+  height: 27px;
+}
+#deals-offers-qr {
+  height: 94px;
+  width: 94px;
+}
+#daraz-footer-logo {
+  height: 38px;
+  width: 38px;
+}
+#happy-shopping {
+  color: #f85606;
+  font-weight: 750;
+}
+#download-app {
+  font-size: 10px;
+  line-height: 16px;
+}
+.footer-social-medias {
+  height: 28px;
+  display: block;
+  width: 28px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}

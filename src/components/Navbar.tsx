@@ -65,9 +65,9 @@ const Navbar = () => {
             <Link to="#" className="signup-link text-decoration-none">
               <span>Signup</span>
             </Link>
-            <div className="d-flex align-items-center gap-1">
+            <div className="d-flex align-items-center gap-1 cursor-pointer">
               <img src={languageLogo} alt="" id="language-logo" />
-              <span id="language">EN</span>
+              <span id="language">ENs</span>
             </div>
             <Link to="#">
               <img src={cartImg} alt="" id="nav-cart-img" />

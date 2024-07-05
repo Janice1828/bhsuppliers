@@ -24,7 +24,9 @@ const FooterLinks = () => {
   return (
     <div className="pt-5 d-flex w-75 m-auto">
       <div className="d-flex flex-column" style={{ paddingRight: "60px" }}>
-        <h5 className="footer-links-header">Customer Care</h5>
+        <h5 className="footer-links-header" style={{ width: "240px" }}>
+          Customer Care
+        </h5>
         <Link to="#" className="footer-links text-decoration-none text-dark">
           Help Center
         </Link>
@@ -49,7 +51,9 @@ const FooterLinks = () => {
         </Link>
       </div>
       <div className="d-flex flex-column" style={{ paddingRight: "60px" }}>
-        <h5 className="footer-links-header">Daraz</h5>
+        <h5 className="footer-links-header" style={{ width: "240px" }}>
+          Daraz
+        </h5>
         <Link to="#" className="footer-links text-decoration-none text-dark">
           About Daraz
         </Link>
@@ -81,14 +85,20 @@ const FooterLinks = () => {
           Meet the winners
         </Link>
       </div>
-      <div style={{ paddingRight: "60px", width: "400px" }}>
+      <div style={{ paddingRight: "60px", width: "294px" }}>
         <h5 className="footer-links-header w-auto">Daraz International</h5>
         <div className="row">
-          <p className="footer-links d-flex gap-2 align-items-center w-auto">
+          <p
+            className="footer-links d-flex align-items-center w-auto"
+            style={{ gap: "7px" }}
+          >
             <img src={pakistanFlag} alt="" className="footer-countries-flag" />
             <span>Pakistan</span>
           </p>
-          <p className="footer-links d-flex gap-2 align-items-center w-auto">
+          <p
+            className="footer-links d-flex align-items-center w-auto"
+            style={{ gap: "7px" }}
+          >
             <img
               src={bangladeshFlag}
               alt=""
@@ -96,20 +106,29 @@ const FooterLinks = () => {
             />
             <span>Bangladesh</span>
           </p>
-          <p className="footer-links d-flex gap-2 align-items-center w-auto">
+          <p
+            className="footer-links d-flex align-items-center w-auto"
+            style={{ gap: "7px" }}
+          >
             <img src={srilankaFlag} alt="" className="footer-countries-flag" />
             <span>Sri Lanka</span>
           </p>
-          <p className="footer-links d-flex gap-2 align-items-center w-auto">
+          <p
+            className="footer-links d-flex align-items-center w-auto"
+            style={{ gap: "7px" }}
+          >
             <img src={myanmarFlag} alt="" className="footer-countries-flag" />
             <span>Myanmar</span>
           </p>
-          <p className="footer-links d-flex gap-2 align-items-center">
+          <p
+            className="footer-links d-flex align-items-center"
+            style={{ gap: "7px" }}
+          >
             <img src={nepalFlag} alt="" className="footer-countries-flag" />
             <span>Nepal</span>
           </p>
         </div>
-        <h5 className="footer-links-header">Payment Methods</h5>
+        <h5 className="footer-links-header mt-2">Payment Methods</h5>
         <div className="d-flex flex-wrap gap-2">
           <Link to="#">
             <img src={cashOnDelivery} className="payment-methods" alt="" />
@@ -128,12 +147,12 @@ const FooterLinks = () => {
             <img src={imePay} alt="" className="payment-methods " />
           </Link>
         </div>
-        <h5 className="footer-links-header">Verified By</h5>
+        <h5 className="footer-links-header mt-2">Verified By</h5>
         <div>
           <img src={pciDss} className="footer-verifiedby-img" alt="" />
         </div>
       </div>
-      <div style={{ paddingRight: "60px" }}>
+      <div>
         <h5 className="footer-links-header">Exclusive Deals and Offers!</h5>
         <div>
           <div className="d-flex gap-2">

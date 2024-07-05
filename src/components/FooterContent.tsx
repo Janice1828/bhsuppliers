@@ -1,28 +1,31 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FooterContent = () => {
   return (
-    <div className="d-flex justify-content-between w-75 m-auto mt-4">
+    <div className="d-flex justify-content-between w-75 m-auto mt-4 pt-4">
       <div style={{ paddingRight: "34px" }}>
-        <h5>Experience Hassle-Free Online Shopping in Nepal with Daraz</h5>
-        <p className="footer-content">
+        <h5 className="footer-headings">
+          Experience Hassle-Free Online Shopping in Nepal with Daraz
+        </h5>
+        <p className="footer-content" style={{ width: "257px" }}>
           E-commerce has evolved over the past few years and since it’s easier
           and more convenient, it is evident that customers are actually
           switching to the trend of online shopping. Daraz, the Nepali shopping
           store, brings a whole new concept by showcasing a number of famous
           brands under one roof. Not only does it fulfill clothing necessities
-          of both men and women but you can also shop for all kinds of
-          appliances like air conditioners, heaters, refrigerators, LED TVs and
-          a lot more. Simply select your favorite brand like Samsung, Apple, HP,
-          Huawei, Dell, Canon, Nikon, etc and get yourself the best electronic
-          items.
+          of both men and women
+          <br /> but you can also shop for all kinds of appliances like air
+          conditioners, heaters, refrigerators, LED TVs and a lot more. Simply
+          select your favorite brand like Samsung, Apple, HP, Huawei, Dell,
+          Canon, Nikon, etc and get yourself the best electronic items.
         </p>
         <h5 className="footer-headings">Convenient Online Shopping in Nepal</h5>
         <p className="footer-content">
           Daraz is the ultimate Nepali eCommerce website that offers a solution
-          for all needs of the customers. It has a wide and assorted range of
-          products including clothing, electronics, mobile phones, home and
-          living, health and beauty and much more.
+          for all needs of <br /> the customers. It has a wide and assorted
+          range of products including clothing, electronics, mobile phones, home
+          and living, health and beauty and much more.
         </p>
         <p className="footer-content">
           Daraz strives to provide customers the best shopping experience in
@@ -30,7 +33,7 @@ const FooterContent = () => {
         </p>
       </div>
       <div style={{ paddingRight: "34px" }}>
-        <p className="footer-content">
+        <p className="footer-content" style={{ width: "258px" }}>
           is updated daily and new products are added every day to cater to all
           your needs. Visit Daraz.com.np to experience shopping in Nepal as
           never before. Don't forget to Download Daraz App and get exclusive
@@ -38,7 +41,22 @@ const FooterContent = () => {
         </p>
         <p className="footer-content">
           Daraz is a global online marketplace with ecommerce stores in
-          Pakistan, Bangladesh, Nepal, Sri Lanka and Myanmar.
+          <Link to="#" className="footer-country-links">
+            &nbsp;Pakistan
+          </Link>
+          ,
+          <Link to="#" className="footer-country-links">
+            Bangladesh
+          </Link>
+          , Nepal
+          <Link to="#" className="footer-country-links">
+            Sri Lanka
+          </Link>
+          , and
+          <Link to="#" className="footer-country-links">
+            Myanmar
+          </Link>
+          .
         </p>
         <p className="footer-content general-information">
           General Information:
@@ -54,9 +72,10 @@ const FooterContent = () => {
         </p>
         <h5 className="footer-headings">TRENDING</h5>
         <p className="footer-content">
-          Daraz 11.11 Sale , 12.12 Sale , Dashain Dhamaka , Mobile Week ,
+          Daraz 11.11 Sale , 12.12 Sale ,<br /> Dashain Dhamaka , Mobile Week ,
+          <br />
           Valentine's Day Sale , Cricket Streaming , Grocery Shopping in Nepal ,
-          Realme GT 2 Pro , Realme GT Neo 3
+          Realme GT 2 Pro, Realme GT Neo 3
         </p>
       </div>
       <div style={{ paddingRight: "34px" }}>

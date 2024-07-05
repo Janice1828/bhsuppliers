@@ -35,7 +35,7 @@ const Navbar = () => {
               Daraz Logistics Partner
             </Link>
           </div>
-          <div className="d-flex align-items-center bg-dark bg-opacity-25 p-1 rounded-2">
+          <div className="d-flex align-items-center bg-dark bg-opacity-25 p-1 rounded-2 cursor-pointer">
             <img src={NavLogo} alt="" id="nav-daraz-logo" />
             <span className="mx-2 app-discount text-light">
               Save More on App
@@ -67,7 +67,7 @@ const Navbar = () => {
             </Link>
             <div className="d-flex align-items-center gap-1 cursor-pointer">
               <img src={languageLogo} alt="" id="language-logo" />
-              <span id="language">ENs</span>
+              <span id="language">EN</span>
             </div>
             <Link to="#">
               <img src={cartImg} alt="" id="nav-cart-img" />

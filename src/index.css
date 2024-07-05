@@ -112,21 +112,25 @@
   cursor: pointer;
 }
 .footer-sub-headings {
-  font-size: 13px;
+  font-size: 12px;
   line-height: 15px;
   color: rgb(51, 51, 51) !important;
   text-transform: capitalize;
   margin-bottom: 1px;
 }
 .footer-headings {
-  font-size: 18px;
+  font-size: 18px !important;
   line-height: 20px;
   font-weight: 400;
   color: rgb(96, 96, 96) !important;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .footer-content {
   color: rgb(136, 136, 136);
   font-size: 12px;
   line-height: 18px;
+}
+.footer-country-links {
+  text-decoration: none;
+  color: rgb(25, 156, 183);
 }

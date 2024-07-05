@@ -4,21 +4,20 @@ import { Link } from "react-router-dom";
 const JustForYou = () => {
   return (
     <>
-      <h3>Just For You</h3>
-      <div>
-        <div className="card">
+      <h3 className="home-headings">Just For You</h3>
+      <div className="row w-100 px-0 mx-0">
+        <div className="col-2 card rounded-0">
           <div className="card-body">
             <div className="card-content">
               <img src={testImg} style={{ height: "100px" }} alt="" />
-              <p>open Military Gps smart watch men</p>
-              <p>Rs.587</p>
-              <span>Rs.1572</span>
+              <p className="justforyou-title mb-0 pt-2">
+                open Military Gps smart watch men
+              </p>
+              <p className="justforyou-discounted-price mb-0">Rs.587</p>
+              <span className="justforyou-price">Rs.1572</span>
             </div>
           </div>
         </div>
-      </div>
-      <div className="load-more-products-btn">
-        <Link to="#">Load More</Link>
       </div>
     </>
   );

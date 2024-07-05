@@ -134,3 +134,76 @@
   text-decoration: none;
   color: rgb(25, 156, 183);
 }
+.filter-link {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #000;
+}
+.home-headings {
+  font-size: 22px;
+  font-weight: 400;
+  color: rgb(66, 66, 66);
+  line-height: 38px;
+}
+.categories-title {
+  font-size: 14px;
+  color: rgb(33, 33, 33);
+  font-weight: 400;
+  line-height: 18px;
+}
+#shop-more-btn {
+  text-decoration: none;
+  color: rgb(245, 114, 36);
+  border: 1px solid rgb(245, 114, 36);
+  padding: 10px;
+  font-size: 14px;
+  line-height: 35px;
+  font-weight: 500;
+}
+.flashsale-title {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000;
+}
+.flashsale-discounted-price {
+  font-size: 18px;
+  color: rgb(248, 86, 6);
+  line-height: 22px;
+  font-weight: 400;
+}
+.flashsale-price {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  color: rgb(158, 158, 158);
+}
+.darazmall-title {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.darazmall-subtitle {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  color: rgb(158, 158, 158);
+}
+.justforyou-title {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.justforyou-discounted-price {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgb(248, 86, 6);
+}
+.justforyou-price {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  color: rgb(158, 158, 158);
+}

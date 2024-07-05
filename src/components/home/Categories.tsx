@@ -1,15 +1,17 @@
 import React from "react";
-import testImg from "../../Images/mastercard.png";
+import diaper from "../../Images/diaper.jpg";
 const Categories = () => {
   return (
     <>
-      <h3>Categories</h3>
-      <div>
-        <div className="card">
+      <h3 className="home-headings">Categories</h3>
+      <div className="category-product">
+        <div className="card rounded-0" style={{ width: "160px" }}>
           <div className="card-body">
-            <div className="card-content">
-              <img src={testImg} alt="" style={{ height: "50px" }} />
-              <span>Disposable Diapers</span>
+            <div className="card-content d-flex flex-column">
+              <img src={diaper} alt="" />
+              <span className="categories-title text-center pt-2">
+                Disposable Diapers
+              </span>
             </div>
           </div>
         </div>

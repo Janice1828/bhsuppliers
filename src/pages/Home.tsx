@@ -7,6 +7,7 @@ import Categories from "../components/home/Categories";
 import Flashsale from "../components/home/Flashsale";
 import Darazmall from "../components/home/Darazmall";
 import JustForYou from "../components/home/JustForYou";
+import Sale from "../components/home/Sale";
 
 const Home = () => {
   return (
@@ -15,13 +16,28 @@ const Home = () => {
         <div className="navbar">
           <Navbar />
         </div>
-        <div className="products">
-          <Filter />
-          <Discount />
-          <Categories />
-          <Flashsale />
-          <Darazmall />
-          <JustForYou />
+        <div className="products row w-75 m-auto pt-1">
+          <div className="col-3">
+            <Filter />
+          </div>
+          <div className="col-9 p-0">
+            <Sale />
+          </div>
+          <div className="col-12 pt-3 pb-3">
+            <Discount />
+          </div>
+          <div className="col-12">
+            <Categories />
+          </div>
+          <div className="col-12 mt-3">
+            <Flashsale />
+          </div>
+          <div className="col-12 mt-3">
+            <Darazmall />
+          </div>
+          <div className="col-12 mt-3">
+            <JustForYou />
+          </div>
         </div>
         <div className="footer">
           <Footer />

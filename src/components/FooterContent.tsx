@@ -2,10 +2,10 @@ import React from "react";
 
 const FooterContent = () => {
   return (
-    <div className="d-flex justify-content-between">
-      <div>
-        <h4>Experience Hassle-Free Online Shopping in Nepal with Daraz</h4>
-        <p>
+    <div className="d-flex justify-content-between w-75 m-auto mt-4">
+      <div style={{ paddingRight: "34px" }}>
+        <h5>Experience Hassle-Free Online Shopping in Nepal with Daraz</h5>
+        <p className="footer-content">
           E-commerce has evolved over the past few years and since it’s easier
           and more convenient, it is evident that customers are actually
           switching to the trend of online shopping. Daraz, the Nepali shopping
@@ -17,70 +17,77 @@ const FooterContent = () => {
           Huawei, Dell, Canon, Nikon, etc and get yourself the best electronic
           items.
         </p>
-        <h4>Convenient Online Shopping in Nepal</h4>
-        <p>
+        <h5 className="footer-headings">Convenient Online Shopping in Nepal</h5>
+        <p className="footer-content">
           Daraz is the ultimate Nepali eCommerce website that offers a solution
           for all needs of the customers. It has a wide and assorted range of
           products including clothing, electronics, mobile phones, home and
           living, health and beauty and much more.
         </p>
-        <p>
+        <p className="footer-content">
           Daraz strives to provide customers the best shopping experience in
           Nepal. The online store
         </p>
       </div>
-      <div>
-        <p>
+      <div style={{ paddingRight: "34px" }}>
+        <p className="footer-content">
           is updated daily and new products are added every day to cater to all
           your needs. Visit Daraz.com.np to experience shopping in Nepal as
           never before. Don't forget to Download Daraz App and get exclusive
           discounts.
         </p>
-        <p>
+        <p className="footer-content">
           Daraz is a global online marketplace with ecommerce stores in
           Pakistan, Bangladesh, Nepal, Sri Lanka and Myanmar.
         </p>
-        <h5>General Information:</h5>
-        <p>
+        <p className="footer-content general-information">
+          General Information:
+        </p>
+        <p className="footer-content">
           Daraz Kaymu Private Limited Kathmandu Metropolitan City, Ward No.
           11,Thapathali,Kathmandu, Nepal VAT No. 602403687
         </p>
-        <p>Grievance handling Information:</p>
-        <p>
+        <p className="footer-content">Grievance handling Information:</p>
+        <p className="footer-content">
           Grievance Management 015970597 (please ask to be redirected to our
           Grievance Management team)
         </p>
-        <h4>TRENDING</h4>
-        <p>
+        <h5 className="footer-headings">TRENDING</h5>
+        <p className="footer-content">
           Daraz 11.11 Sale , 12.12 Sale , Dashain Dhamaka , Mobile Week ,
           Valentine's Day Sale , Cricket Streaming , Grocery Shopping in Nepal ,
           Realme GT 2 Pro , Realme GT Neo 3
         </p>
       </div>
-      <div>
-        <h4>Top Categories & Brands</h4>
-        <p>
-          NEW MOBILE PHONES IN NEPAL Samsung Mobile Phones, Xiaomi Mobiles,
-          Nokia Mobiles, Oppo Mobiles, Apple iPhones, OnePlus, Sony Mobiles,
-          Huawei Mobiles, Lenovo Mobiles, Colors Mobiles, Gionee Mobiles, HTC
-          Mobiles, Umidigi Mobiles, Tablets, Samsung Tablet, Mobile Accessories
+      <div style={{ paddingRight: "34px" }}>
+        <h5 className="footer-headings">Top Categories & Brands</h5>
+        <p className="footer-sub-headings">NEW MOBILE PHONES IN NEPAL</p>
+        <p className="footer-content">
+          Samsung Mobile Phones, Xiaomi Mobiles, Nokia Mobiles, Oppo Mobiles,
+          Apple iPhones, OnePlus, Sony Mobiles, Huawei Mobiles, Lenovo Mobiles,
+          Colors Mobiles, Gionee Mobiles, HTC Mobiles, Umidigi Mobiles, Tablets,
+          Samsung Tablet, Mobile Accessories
         </p>
-        <p>LATEST LAPTOPS</p>
-        <p>
+        <p className="footer-sub-headings">LATEST LAPTOPS</p>
+        <p className="footer-content">
           Apple Laptops, Samsung Laptops, Asus Laptops, Acer Laptops, HP
           Laptops, Dell Laptops
         </p>
-        <p>LED TVS PRICES</p>
-        <p>Samsung LED TVs, Sony LED TVs, Videocon LED TVs</p>
-        <p>SUMMER APPLIANCES</p>
-        <p>
+        <p className="footer-sub-headings">LED TVS PRICES</p>
+        <p className="footer-content">
+          Samsung LED TVs, Sony LED TVs, Videocon LED TVs
+        </p>
+        <p className="footer-sub-headings">SUMMER APPLIANCES</p>
+        <p className="footer-content">
           Air Conditioners, Refrigerators & Fridges, Samsung Refrigerators, Deep
           Freezers, Generators & Portable Power, Water Dispensers
         </p>
-        <p>CAMERAS</p>
-        <p>Camera Tripods, Drones, IP & CCTV Cameras</p>
-        <p>LATEST GADGETS</p>
-        <p>
+        <p className="footer-sub-headings">CAMERAS</p>
+        <p className="footer-content">
+          Camera Tripods, Drones, IP & CCTV Cameras
+        </p>
+        <p className="footer-sub-headings">LATEST GADGETS</p>
+        <p className="footer-content">
           Earphones & Headsets, Power Banks, Smart Watches, Portable Speakers,
           VR Headsets, PS4 Pro - PS4 Slim, Dell XPS 15, HP Envy 13, HP Spectre
           x360, Samsung A51, Galaxy Tab A7, Galaxy Tab S7, Samsung A72, Samsung
@@ -92,30 +99,34 @@ const FooterContent = () => {
           A73, Samsung A33, Samsung A53, Xiaomi Pad 5, NIU, iPhone 14, iPhone 14
           Pro, iPhone 14 Plus, iPhone 14 Pro Max
         </p>
-        <p>COMPUTER COMPONENTS</p>
-        <p>
+      </div>
+      <div>
+        <p className="footer-sub-headings">COMPUTER COMPONENTS</p>
+        <p className="footer-content">
           Ram, Motherboards, Processors, Desktop Casings, CPU Cooling Fans,
           Gaming Graphic Cards
         </p>
-        <p>WOMEN'S FASHION</p>
-        <p>
+        <p className="footer-sub-headings">WOMEN'S FASHION</p>
+        <p className="footer-content">
           Clothes, Ladies Watches, Jewelry, Sarees, Ladies Kurti Designs, Women
           Undergarments, Shirts for Ladies & Girls, T-shirts for Ladies & Girls
         </p>
-        <p>MEN'S FASHION</p>
-        <p>
+        <p className="footer-sub-headings">MEN'S FASHION</p>
+        <p className="footer-content">
           Men's jeans, Bags for Men, Men's Shoes, Men's T-Shirts, Men's Watches
         </p>
-        <p>ONLINE GROCERY STORE</p>
-        <p>Rice, Chocolates, Tea, Coffee</p>
-        <p>ONLINE BOOKSTORE</p>
-        <p>Stationary Store, Religious Items</p>
-        <p>ONLINE AUTOMOTIVE STORE</p>
-        <p>Motorcycles - Bikes, Helmets</p>
-        <p>LEADING ONLINE STORES</p>
-        <p>Goldstar Shoes, Dell, Samsung, Canon, Oppo, Sony, Nokia, Apple</p>
-        <p>TRENDING PRODUCTS</p>
-        <p>
+        <p className="footer-sub-headings">ONLINE GROCERY STORE</p>
+        <p className="footer-content">Rice, Chocolates, Tea, Coffee</p>
+        <p className="footer-sub-headings">ONLINE BOOKSTORE</p>
+        <p className="footer-content">Stationary Store, Religious Items</p>
+        <p className="footer-sub-headings">ONLINE AUTOMOTIVE STORE</p>
+        <p className="footer-content">Motorcycles - Bikes, Helmets</p>
+        <p className="footer-sub-headings">LEADING ONLINE STORES</p>
+        <p className="footer-content">
+          Goldstar Shoes, Dell, Samsung, Canon, Oppo, Sony, Nokia, Apple
+        </p>
+        <p className="footer-sub-headings">TRENDING PRODUCTS</p>
+        <p className="footer-content">
           Vivo Y20, Oppo A12, Samsung Galaxy M31, iPhone 12, Redmi 9A, Poco F3,
           Samsung M12, Oppo F19 Pro, Samsung A32, Infinix Hot 10, Samsung A12,
           OnePlus Nord 2, Samsung M62, Samsung M32, TVS Ntorq, Poco X3 Pro, Poco
@@ -126,7 +137,6 @@ const FooterContent = () => {
           Tab S6, Tab A8, Stealth 13
         </p>
       </div>
-      <div></div>
     </div>
   );
 };

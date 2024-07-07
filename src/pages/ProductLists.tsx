@@ -9,9 +9,9 @@ const ProductLists = () => {
   return (
     <>
       <Navbar />
-      <div className="row mx-0">
+      <div className="row m-auto w-75">
         <div className="col-12">
-          <p>Home/Motors/Motorcycle</p>
+          <p className="py-2 filter-pages-list">Home / Motors / Motorcycle</p>
         </div>
         <div className="col-3">
           <Filters />

@@ -8,15 +8,19 @@ import Location from "./Filterlists/Location";
 import Size from "./Filterlists/Size";
 import Warrentytype from "./Filterlists/Warrentytype";
 import Services from "./Filterlists/Services";
+import Brand from "./Filterlists/Brand";
 const Filters = () => {
   return (
     <div>
-      <h3>Filters</h3>
+      <p id="filters-list-heading">Filters</p>
       <div className="mt-2">
         <Promotions />
       </div>
       <div className="mt-4">
         <Category />
+      </div>
+      <div className="mt-4">
+        <Brand />
       </div>
       <div className="mt-4">
         <Color />
@@ -30,7 +34,7 @@ const Filters = () => {
       <div className="mt-4">
         <Location />
       </div>
-      <div className="mt-4">
+      {/* <div className="mt-4">
         <Size />
       </div>
       <div className="mt-4">
@@ -38,7 +42,7 @@ const Filters = () => {
       </div>
       <div className="mt-4">
         <Services />
-      </div>
+      </div> */}
     </div>
   );
 };

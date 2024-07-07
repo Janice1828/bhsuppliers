@@ -290,3 +290,105 @@
   font-weight: 400;
   color: rgba(0, 0, 0, 0.85);
 }
+.product-view-order {
+  height: 20px;
+}
+.founded-items-number {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.sort-by-view {
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.65);
+}
+.sort-by-filter-options {
+  width: 200px;
+  font-size: 14px;
+  line-height: 38px;
+  font-weight: 500;
+  border: 1px solid #9b9b9b;
+  color: rgba(0, 0, 0, 0.898);
+  border-radius: 20px;
+  height: 40px;
+  outline: none;
+  padding: 0px 10px;
+}
+.products-size-filter-btn {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: rgb(248, 87, 5);
+  background: rgb(255, 241, 234);
+  border: 1px solid rgb(254, 221, 205);
+  height: 36px;
+  width: 260px;
+  border-radius: 21px;
+  margin-top: 20px;
+}
+.border-1 {
+  display: block;
+  height: 1px;
+  background: #f1f1f1;
+  margin: 20px 0px;
+}
+.productlist-product-title {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.productlist-sold-numbers,
+.productlist-products-rating {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.productlist-product-price {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  color: rgb(248, 86, 6);
+  padding-top: 8px;
+}
+.products-vouchers button {
+  font-size: 10px;
+  line-height: 15px;
+  font-weight: 400;
+  color: rgb(0, 119, 135) !important;
+  padding: 0 5px;
+  border: 1px solid rgb(0, 119, 135);
+  background: #fff;
+  border-radius: 2px;
+}
+.review-content {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgb(32, 32, 32);
+}
+.review-btns button {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: rgb(93, 93, 93);
+  border-radius: 6px;
+  background: #fff;
+  outline: none;
+  height: 28px;
+  padding: 0px 10px;
+  border: 1px solid #a8a8a8;
+}
+.pagination-btns {
+  border: 0;
+  outline: none;
+  background: #f85606;
+  border-radius: 3px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}

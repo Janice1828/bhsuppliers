@@ -1,7 +1,11 @@
 import React from "react";
 
 const Pagination = () => {
-  return <div>Pagination</div>;
+  return (
+    <div>
+      <div className="pagination-btns">1</div>
+    </div>
+  );
 };
 
 export default Pagination;

@@ -207,3 +207,6 @@
   font-weight: 400;
   color: rgb(158, 158, 158);
 }
+.productlist-product-img {
+  height: 50px;
+}

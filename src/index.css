@@ -392,3 +392,129 @@
   justify-content: center;
   color: #fff;
 }
+.signup-title {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: rgb(66, 66, 66);
+}
+.login-page-link {
+  font-size: 12px;
+  line-height: 26px;
+  color: rgb(117, 117, 117);
+  font-weight: 400;
+}
+.login-page-link a {
+  color: rgb(26, 156, 183);
+}
+.signup-container {
+  background: #eff0f5;
+}
+.signup-form {
+  background: #fff;
+  padding: 10px 5px 70px 5px;
+}
+footer {
+  background: #f5f5f5;
+}
+.signup-form-label {
+  font-size: 12px;
+  color: rgb(66, 66, 66);
+  line-height: 15px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.signup-form-input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #ddd;
+  outline: none;
+  padding: 0 35px 0 10px;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.signup-btn {
+  height: 48px;
+  padding: 0 36px;
+  line-height: 46px;
+  border-width: 1px;
+  background: #f57224;
+  border-color: transparent;
+  border-style: solid;
+  font-size: 14px;
+  color: #fff;
+  width: 100%;
+  border-radius: 2px;
+}
+.code-receiving-methods {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  color: rgb(4, 156, 185);
+  text-decoration: none;
+}
+.txt-blue {
+  color: rgb(4, 156, 185);
+}
+.agreement {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: rgb(117, 117, 117);
+}
+.signup-with-facebook {
+  background: #3b5998;
+  height: 40px;
+  color: #fff;
+  line-height: 40px;
+  font-size: 18px;
+  border-radius: 3px;
+  width: 100%;
+  text-align: center;
+}
+.signup-with-google {
+  background: #d34836;
+  height: 40px;
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+  font-size: 18px;
+  border-radius: 3px;
+  width: 100%;
+}
+#signup-checkbox {
+  height: 15px;
+  width: 15px;
+}
+.or-signup-with {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  color: rgb(117, 117, 117);
+}
+.signup-form select {
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0 5px 0 5px !important;
+}
+
+.signup-container-width {
+  width: 870px;
+}
+.signup-form option {
+  font-size: 14px;
+}
+.w-68 {
+  width: 68% !important;
+}
+.w-32 {
+  width: 32% !important;
+}
+.signup-facebook-icon {
+  height: 20px;
+  width: 20px;
+}
+.signup-google-plus-icon {
+  height: 28px;
+  width: 28px;
+}

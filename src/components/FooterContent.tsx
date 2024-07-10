@@ -50,7 +50,7 @@ const FooterContent = () => {
           </Link>
           , Nepal
           <Link to="#" className="footer-country-links">
-            Sri Lanka
+            , Sri Lanka
           </Link>
           , and
           <Link to="#" className="footer-country-links">

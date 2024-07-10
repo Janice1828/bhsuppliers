@@ -392,13 +392,15 @@
   justify-content: center;
   color: #fff;
 }
-.signup-title {
+.signup-title,
+.login-title {
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
   color: rgb(66, 66, 66);
 }
-.login-page-link {
+.login-page-link,
+.login-register-link {
   font-size: 12px;
   line-height: 26px;
   color: rgb(117, 117, 117);
@@ -407,24 +409,31 @@
 .login-page-link a {
   color: rgb(26, 156, 183);
 }
-.signup-container {
+.signup-container,
+.login-container {
   background: #eff0f5;
 }
 .signup-form {
   background: #fff;
   padding: 10px 5px 70px 5px;
 }
+.login-form {
+  background-color: #fff;
+  padding: 15px 50px 70px 0px;
+}
 footer {
   background: #f5f5f5;
 }
-.signup-form-label {
+.signup-form-label,
+.login-form-label {
   font-size: 12px;
   color: rgb(66, 66, 66);
   line-height: 15px;
   font-weight: 400;
   margin-bottom: 5px;
 }
-.signup-form-input {
+.signup-form-input,
+.login-form-input {
   height: 40px;
   width: 100%;
   border: 1px solid #ddd;
@@ -433,7 +442,8 @@ footer {
   font-size: 14px;
   margin-bottom: 2px;
 }
-.signup-btn {
+.signup-btn,
+.login-btn {
   height: 48px;
   padding: 0 36px;
   line-height: 46px;
@@ -462,7 +472,8 @@ footer {
   line-height: 14px;
   color: rgb(117, 117, 117);
 }
-.signup-with-facebook {
+.signup-with-facebook,
+.login-with-facebook {
   background: #3b5998;
   height: 40px;
   color: #fff;
@@ -472,7 +483,8 @@ footer {
   width: 100%;
   text-align: center;
 }
-.signup-with-google {
+.signup-with-google,
+.login-with-google {
   background: #d34836;
   height: 40px;
   text-align: center;
@@ -486,7 +498,11 @@ footer {
   height: 15px;
   width: 15px;
 }
-.or-signup-with {
+.fs-12 {
+  font-size: 12px;
+}
+.or-signup-with,
+.or-login-with {
   font-size: 12px;
   line-height: 14px;
   font-weight: 400;
@@ -498,7 +514,8 @@ footer {
   padding: 0 5px 0 5px !important;
 }
 
-.signup-container-width {
+.signup-container-width,
+.login-container-width {
   width: 870px;
 }
 .signup-form option {
@@ -510,11 +527,13 @@ footer {
 .w-32 {
   width: 32% !important;
 }
-.signup-facebook-icon {
+.signup-facebook-icon,
+.login-facebook-icon {
   height: 20px;
   width: 20px;
 }
-.signup-google-plus-icon {
+.signup-google-plus-icon,
+.login-googleplus-icon {
   height: 28px;
   width: 28px;
 }

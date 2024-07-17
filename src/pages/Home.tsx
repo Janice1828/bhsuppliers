@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       <div className="home-container">
-        <div className="navbar">
+        <div className="navbar pt-0">
           <Navbar />
         </div>
         <div className="products row w-75 m-auto pt-1">

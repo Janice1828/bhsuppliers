@@ -6,7 +6,7 @@ import cartImg from "../../src/Icons/icons8-cart-24.png";
 import userIcon from "../../src/Icons/user.png";
 const Navbar = () => {
   return (
-    <div className="nav d-block w-100 pb-3">
+    <div className="nav pt-0 d-block w-100 pb-3">
       <div className="w-75 m-auto">
         <div className="hero d-flex justify-content-between">
           <div className="d-flex gap-4">
@@ -43,7 +43,9 @@ const Navbar = () => {
           </div>
         </div>
         <div className="nav-section d-flex gap-4 align-items-center">
-          <img src={NavWhiteLogo} id="nav-daraz-white-logo" alt="" />
+          <Link to="/">
+            <img src={NavWhiteLogo} id="nav-daraz-white-logo" alt="" />
+          </Link>
           <form action="#" className="w-100">
             <input
               type="text"
@@ -54,7 +56,7 @@ const Navbar = () => {
           </form>
           <div className="d-flex gap-4 align-items-center">
             <Link
-              to="#"
+              to="/login"
               className="login-link text-decoration-none d-flex align-items-center gap-2"
             >
               <img src={userIcon} alt="" id="nav-user-icon" />
@@ -62,7 +64,7 @@ const Navbar = () => {
               <span> Login</span>
             </Link>
             <p className="border-y bg-light"></p>
-            <Link to="#" className="signup-link text-decoration-none">
+            <Link to="/signup" className="signup-link text-decoration-none">
               <span>Signup</span>
             </Link>
             <div className="d-flex align-items-center gap-1 cursor-pointer">

@@ -17,7 +17,7 @@ const Login = () => {
             <div className="d-flex justify-content-end  col-6">
               <span className="login-register-link">
                 New member?{" "}
-                <Link to="#" className="text-decoration-none txt-blue">
+                <Link to="/signup" className="text-decoration-none txt-blue">
                   Register
                 </Link>{" "}
                 here.

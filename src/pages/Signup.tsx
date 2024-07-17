@@ -15,7 +15,7 @@ const Signup = () => {
             <h3 className="signup-title">Create Your Daraz Account</h3>
             <span className="login-page-link">
               Already Member?
-              <Link to="#" className="text-decoration-none">
+              <Link to="/login" className="text-decoration-none">
                 &nbsp;Login &nbsp;
               </Link>
               here.

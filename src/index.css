@@ -537,3 +537,240 @@ footer {
   height: 28px;
   width: 28px;
 }
+.productdetail-filter-title {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+  padding: 15px 0px;
+  margin: 0px;
+  color: rgb(26, 156, 183);
+}
+
+.productDetail-productImg {
+  width: 300px;
+}
+
+.productDetail-productImg img {
+  height: 100%;
+  width: 100%;
+}
+.detailed-img-lists img {
+  width: 60px;
+}
+.productDetail-product-title {
+  font-size: 22px;
+  line-height: 25px;
+  font-weight: 400;
+}
+.productDetail-rating-no,
+.productDetail-brand .brand-name {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  color: rgb(22, 132, 155);
+}
+.productDetail-brand .title {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  color: rgb(158, 158, 158);
+}
+.productDetail-price .price {
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 400;
+  color: rgb(248, 86, 6);
+}
+.quantity {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: rgb(117, 117, 117);
+  padding-right: 20px;
+}
+.productDetail-qty {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgb(33, 33, 33);
+  width: 44px;
+  text-align: center;
+}
+.productDetail-qty-btns {
+  font-size: 26px;
+  line-height: 24px;
+  color: rgb(158, 158, 158);
+  background: #eff0f5;
+  border: none;
+  outline: none;
+  padding: 2px 8px;
+  font-weight: 300;
+}
+.buy-now,
+.add-to-cart {
+  width: 225px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  height: 44px;
+}
+.buy-now {
+  background-color: #2abbe8;
+  color: #fff;
+}
+.add-to-cart {
+  background-color: #f57224;
+  color: #fff;
+}
+.location-logo,
+.cash-on-delivery,
+.trusted-brand-logo,
+.warranty-logo {
+  height: 20px;
+}
+.chat-logo {
+  height: 12px;
+}
+.info-logo {
+  height: 15px;
+}
+.delivery button {
+  border: none;
+  outline: none;
+  color: rgb(1, 131, 158);
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 500;
+  background: transparent;
+}
+.delivery-title,
+.sold-by-title,
+.service-title {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  color: rgb(117, 117, 117);
+}
+.deliver-subtitles,
+.service-subtitles {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: rgb(32, 32, 32);
+}
+.product-detail-seller-name {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgb(33, 33, 33);
+}
+.chat-title {
+  font-size: 14px;
+  line-height: 16px;
+  color: rgb(25, 156, 183);
+  font-weight: 400;
+}
+.product-detail-table tbody tr td span {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  color: rgb(117, 117, 117);
+}
+.product-detail-table tbody tr td p {
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 400;
+  color: rgb(26, 26, 26);
+}
+.not-enough-data {
+  font-size: 12px !important;
+  line-height: 30px !important;
+  font-weight: 400 !important;
+  color: rgb(204, 204, 204) !important;
+}
+.people-who-viewed-this {
+  font-size: 16px;
+  line-height: 52px;
+  font-weight: 600;
+  color: rgb(33, 33, 33);
+}
+.who-viewed-this-card .card-text {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  color: rgb(33, 33, 33);
+}
+.who-viewed-this-price {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgb(245, 114, 36);
+}
+.product-detail-title-rating-star {
+  height: 12px;
+  width: 12px;
+}
+.productDetail-price {
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+.productDetail-brand {
+  border-bottom: 1px solid #eff0f5;
+}
+.purchasing-btns {
+  margin-top: 20px;
+}
+.rating-reviews-title {
+  background: #f5f5f5;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  padding: 12px 20px;
+}
+.ratings-counter span {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+.ratings-counter {
+  display: flex;
+  justify-content: center;
+}
+.delivery-location {
+  padding: 10px 0px;
+  border-bottom: 1px solid #eff0f5;
+}
+.product-detail-payment-methods {
+  padding: 15px 0px;
+  border-bottom: 1px solid #eff0f5;
+}
+.service {
+  padding-top: 13px;
+  padding-bottom: 10px;
+}
+.product-detail-table,
+.product-detail-table tr td {
+  border: 1px solid #eff0f5;
+}
+.product-detail-table {
+  border-collapse: collapse;
+  border-left: 0px;
+  border-right: 0px;
+  margin-top: 10px;
+}
+.border-right-0 {
+  border-right: 0px;
+}
+.border-left-0 {
+  border-left: 0px;
+}
+.product-detail-table tbody tr td {
+  padding: 2px;
+}
+.people-who-viewed-this {
+  background: #fafafa;
+}
+.who-viewed-this-card {
+  border: 0px;
+}

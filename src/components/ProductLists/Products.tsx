@@ -4,7 +4,10 @@ import Review from "./Review";
 import Pagination from "./Pagination";
 import Grid from "../../Icons/visualization.png";
 import List from "../../Icons/list.png";
+import { useParams } from "react-router-dom";
 const Products = () => {
+  const id = useParams();
+  console.log("The Displaying Id is :" + id);
   return (
     <div className="row">
       <div className="col-6">

@@ -1,20 +1,30 @@
 import React from "react";
 import diaper from "../../Images/diaper.jpg";
-const Categories = () => {
+import { Link } from "react-router-dom";
+const Categories = ({
+  categoryName,
+  img,
+  id,
+}: {
+  categoryName: string;
+  img: string;
+  id: number;
+}) => {
   return (
     <>
-      <h3 className="home-headings">Categories</h3>
-      <div className="category-product">
-        <div className="card rounded-0" style={{ width: "160px" }}>
-          <div className="card-body">
-            <div className="card-content d-flex flex-column">
-              <img src={diaper} alt="" />
-              <span className="categories-title text-center pt-2">
-                Disposable Diapers
-              </span>
+      <div className="category-product col-2">
+        <Link to={`/products?id=${id}`} className="text-decoration-none">
+          <div className="card rounded-0" style={{ width: "160px" }}>
+            <div className="card-body">
+              <div className="card-content d-flex flex-column">
+                <img src={img} alt="" />
+                <span className="categories-title text-center pt-2">
+                  {categoryName}
+                </span>
+              </div>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
     </>
   );

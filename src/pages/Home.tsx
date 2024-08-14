@@ -6,10 +6,28 @@ import Discount from "../components/home/Discount";
 import Categories from "../components/home/Categories";
 import Flashsale from "../components/home/Flashsale";
 import Darazmall from "../components/home/Darazmall";
-import JustForYou from "../components/home/JustForYou";
 import Sale from "../components/home/Sale";
-
+import { useEffect, useState, useSyncExternalStore } from "react";
+import axios from "axios";
 const Home = () => {
+  const [displayingProducts, setdisplayingProducts] = useState<any[]>([]);
+  const [categories, setCategories] = useState<any[]>([]);
+  useEffect(() => {
+    axios.get("products_two.json").then((data) => {
+      setdisplayingProducts(data.data);
+    });
+    fetch("categories.json")
+      .then((response) => response.json())
+      .then((data) => setCategories(data));
+  }, []);
+
+  const getDiscountedPrice = (
+    discountedPercentage: number,
+    originalPrice: number
+  ) => {
+    let discountPrice = (discountedPercentage / 100) * originalPrice;
+    return Number(discountPrice.toFixed(2));
+  };
   return (
     <>
       <div className="home-container">
@@ -26,17 +44,38 @@ const Home = () => {
           <div className="col-12 pt-3 pb-3">
             <Discount />
           </div>
-          <div className="col-12">
-            <Categories />
+          <div className="col-12 row">
+            <h3 className="home-headings col-12">Categories</h3>
+            <div className="col-12 row">
+              {categories.map((category) => (
+                <Categories
+                  key={category.id}
+                  categoryName={category.name}
+                  img={category.image}
+                  id={category.id}
+                />
+              ))}
+            </div>
           </div>
-          <div className="col-12 mt-3">
+          {/* <div className="col-12 mt-3">
             <Flashsale />
-          </div>
-          <div className="col-12 mt-3">
+          </div> */}
+          {/* <div className="col-12 mt-3">
             <Darazmall />
-          </div>
-          <div className="col-12 mt-3">
-            <JustForYou />
+          </div> */}
+          <div className="col-12 mt-3 row">
+            <h3 className="home-headings">Just For You</h3>
+            <div className="col-12 row gy-3 gx-1">
+              {displayingProducts.map((product) => (
+                <Products
+                  price={product.price}
+                  key={product.id}
+                  productName={product.title}
+                  img={product.images}
+                  id={product.id}
+                />
+              ))}
+            </div>
           </div>
         </div>
         <div className="footer">

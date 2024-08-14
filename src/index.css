@@ -56,6 +56,9 @@
   border-radius: 10px;
   color: rgb(33, 33, 33);
 }
+.home-container {
+  background: #f5f5f5;
+}
 .footer-links {
   font-size: 14px;
   font-weight: 400;
@@ -823,6 +826,9 @@ footer {
   line-height: 16px;
   font-weight: 400;
   color: rgb(117, 117, 117);
+}
+.home-product-content {
+  padding: 0px 10px;
 }
 .cart-product-discounted-price {
   font-size: 18px;

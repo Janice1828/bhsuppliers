@@ -45,8 +45,8 @@ const Home = () => {
             <Discount />
           </div>
           <div className="col-12 row">
-            <h3 className="home-headings col-12">Categories</h3>
-            <div className="col-12 row">
+            <h3 className="home-headings col-12 px-0">Categories</h3>
+            <div className="col-12 row" style={{ gap: "1px" }}>
               {categories.map((category) => (
                 <Categories
                   key={category.id}
@@ -64,8 +64,8 @@ const Home = () => {
             <Darazmall />
           </div> */}
           <div className="col-12 mt-3 row">
-            <h3 className="home-headings">Just For You</h3>
-            <div className="col-12 row gy-3 gx-1">
+            <h3 className="home-headings px-0">Just For You</h3>
+            <div className="col-12 row gy-3 gx-2 mt-0">
               {displayingProducts.map((product) => (
                 <Products
                   price={product.price}

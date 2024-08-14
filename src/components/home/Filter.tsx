@@ -15,7 +15,10 @@ const Filter = () => {
           <ul className="list-group list-unstyled">
             {categoryList.map((category, key) => (
               <li className="list-group-iem" key={key}>
-                <Link to="#" className="text-decoration-none filter-link">
+                <Link
+                  to={`/products?id=${category.id}`}
+                  className="text-decoration-none filter-link"
+                >
                   {category.name}
                 </Link>
               </li>

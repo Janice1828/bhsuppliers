@@ -12,12 +12,16 @@ const Categories = ({
 }) => {
   return (
     <>
-      <div className="category-product col-2">
+      <div className="category-product col-2 p-0 border-none">
         <Link to={`/products?id=${id}`} className="text-decoration-none">
-          <div className="card rounded-0" style={{ width: "160px" }}>
-            <div className="card-body">
-              <div className="card-content d-flex flex-column">
-                <img src={img} alt="" />
+          <div className="card rounded-0 border-light">
+            <div className="card-body pb-4 border-none">
+              <div className="card-content d-flex flex-column align-items-center">
+                <img
+                  src={img}
+                  alt=""
+                  style={{ height: "80px", width: "80px" }}
+                />
                 <span className="categories-title text-center pt-2">
                   {categoryName}
                 </span>

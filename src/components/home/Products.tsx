@@ -14,7 +14,7 @@ const Products = ({
 }) => {
   return (
     <div className="col-2">
-      <Link to={`/productdetail/${id}`} className="text-decoration-none">
+      <Link to={`/productdetail?id=${id}`} className="text-decoration-none">
         <div className="row w-100 px-0 mx-0">
           <div className="card rounded-0">
             <div className="card-body">

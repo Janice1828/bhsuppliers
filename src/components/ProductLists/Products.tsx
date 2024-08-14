@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Product from "./Product";
 import Review from "./Review";
 import Pagination from "./Pagination";
 import Grid from "../../Icons/visualization.png";
 import List from "../../Icons/list.png";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 const Products = () => {
-  const id = useParams();
-  console.log("The Displaying Id is :" + id);
+  const search = window.location.search;
+  const params = new URLSearchParams(search);
+  const id = params.get("id");
+  const [displayingProducts, setDisplayingProducts] = useState<any[]>([]);
+  useEffect(() => {
+    axios.get("products_two.json").then((data) => {
+      const fetchedData = data.data;
+      const filteredCategories = fetchedData.filter((product: any) => {
+        if (product.category == id) {
+          return product;
+        }
+      });
+      setDisplayingProducts(filteredCategories);
+    });
+  }, []);
   return (
     <div className="row">
       <div className="col-6">
@@ -39,18 +54,19 @@ const Products = () => {
         </button>
       </div>
       <div className="col-12 border-1"></div>
-      <div className="col-3">
-        <Product />
+      <div className="col-12 row">
+        {displayingProducts.map((product) => (
+          <div className="col-3" key={product.id}>
+            <Product
+              title={product.title}
+              price={product.price}
+              img={product.images[0]}
+              id={product.id}
+            />
+          </div>
+        ))}
       </div>
-      <div className="col-3">
-        <Product />
-      </div>
-      <div className="col-3">
-        <Product />
-      </div>
-      <div className="col-3">
-        <Product />
-      </div>
+
       <div className="col-6">
         <Review />
       </div>

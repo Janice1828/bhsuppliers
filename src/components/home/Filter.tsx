@@ -13,8 +13,8 @@ const Filter = () => {
       <div className="card-body">
         <div className="card-content">
           <ul className="list-group list-unstyled">
-            {categoryList.map((category) => (
-              <li className="list-group-iem">
+            {categoryList.map((category, key) => (
+              <li className="list-group-iem" key={key}>
                 <Link to="#" className="text-decoration-none filter-link">
                   {category.name}
                 </Link>

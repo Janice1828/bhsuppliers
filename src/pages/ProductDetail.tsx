@@ -1,17 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import FooterLinks from "../components/FooterLinks";
 import diaper from "../../src/Images/diaper.jpg";
 import { Link } from "react-router-dom";
 import Location from "../Icons/pin.png";
 import Cash from "../Icons/cash.png";
-import Delivery from "../Icons/delivery-truck.png";
 import Info from "../Icons/info.png";
 import Trustedbrand from "../Icons/100-percent.png";
 import Warranty from "../Icons/security.png";
 import Chat from "../Icons/chat.png";
 import Ratingstar from "../Icons/rating-star.png";
+import { useState } from "react";
+import axios from "axios";
 const ProductDetail = () => {
+  const search = window.location.search;
+  const params = new URLSearchParams(search);
+  const productId = params.get("id");
+  const [productDetail, setProductDetail] = useState<any>({});
+  useEffect(() => {
+    axios.get("products_two.json").then((data) => {
+      const displayingProductDetail = data.data.filter((product: any) => {
+        if (product.id == productId) {
+          return product;
+        }
+      });
+      setProductDetail(displayingProductDetail[0]);
+    });
+  }, []);
+  console.log(productDetail);
+
   return (
     <>
       <div>
@@ -25,15 +42,15 @@ const ProductDetail = () => {
               <div className="d-flex gap-2">
                 <div className="">
                   <div className="productDetail-productImg">
-                    <img src={diaper} alt="Product Image" />
+                    <img src={productDetail.images} alt="Product Image" />
                   </div>
                   <div className="d-flex gap-2 detailed-img-lists">
-                    <img src={diaper} alt="Img 1" />
+                    <img src={""} alt="Img 1" />
                   </div>
                 </div>
                 <div>
                   <h2 className="productDetail-product-title mb-3">
-                    MAMYPOKO – Pants Style Diapers XL 5pcs
+                    {productDetail.title}
                   </h2>
                   <div className="product-detail-rating d-flex align-items-center gap-2 mb-1">
                     <div className="d-flex align-items-center">
@@ -73,7 +90,7 @@ const ProductDetail = () => {
                   </div>
 
                   <div className="productDetail-price">
-                    <span className="price">RS. 1,150</span>
+                    <span className="price">${productDetail.price}</span>
                   </div>
                   {/* <div className="productDetail-promotions">
                     <span>Promotions</span>

@@ -27,7 +27,6 @@ const ProductDetail = () => {
       setProductDetail(displayingProductDetail[0]);
     });
   }, []);
-  console.log(productDetail);
 
   return (
     <>
@@ -38,14 +37,31 @@ const ProductDetail = () => {
         <div className="w-75 m-auto">
           <p className="productdetail-filter-title">Fashion</p>
           <div className="row">
-            <div className="col-9">
-              <div className="d-flex gap-2">
+            <div className="col-8">
+              <div className="d-flex gap-4">
                 <div className="">
                   <div className="productDetail-productImg">
                     <img src={productDetail.images} alt="Product Image" />
                   </div>
-                  <div className="d-flex gap-2 detailed-img-lists">
-                    <img src={""} alt="Img 1" />
+                  <hr style={{ margin: "10px 0px" }} />
+                  <div className="d-flex gap-2 detailed-img-lists mt-2">
+                    <img
+                      src={
+                        Object.keys(productDetail).length > 0
+                          ? productDetail.images[1]
+                          : ""
+                      }
+                      alt="Img 1"
+                    />
+                    <img
+                      src={
+                        Object.keys(productDetail).length > 0
+                          ? productDetail.images[2]
+                          : ""
+                      }
+                      alt="Img 1"
+                      className="object-fit"
+                    />
                   </div>
                 </div>
                 <div>
@@ -127,7 +143,7 @@ const ProductDetail = () => {
                 </div>
               </div>
             </div>
-            <div className="col-3">
+            <div className="col-4">
               <div className="delivery">
                 <div className="d-flex align-items-center justify-content-between">
                   <span className="delivery-title">Delivery</span>
@@ -140,7 +156,7 @@ const ProductDetail = () => {
                       alt="Location"
                       className="location-logo"
                     />
-                    <span className="deliver-subtitles">
+                    <span className="deliver-subtitles deliver-subtitles-location">
                       Bagmati, Kathmandu Metro 22 - Newroad Area, Newroad
                     </span>
                   </div>
@@ -199,16 +215,30 @@ const ProductDetail = () => {
                   <tbody>
                     <tr>
                       <td className="border-left-0">
-                        <span>Positive Seller Ratings</span>
-                        <p className="pt-3">88%</p>
+                        <div style={{ padding: "0px 7px" }}>
+                          <span>
+                            Positive Seller
+                            <br /> Ratings
+                          </span>
+                          <p className="pt-3">88%</p>
+                        </div>
                       </td>
                       <td>
-                        <span>Ship On Time</span>
-                        <p className="not-enough-data pt-3">not enough data</p>
+                        <div style={{ padding: "0px 7px" }}>
+                          <span>Ship On Time</span>
+                          <p className="not-enough-data pt-3">
+                            not enough data
+                          </p>
+                        </div>
                       </td>
                       <td className="border-right-0">
-                        <span>Chat Response Rate</span>
-                        <p className="pt-3">10%</p>
+                        <div style={{ padding: "0px 7px" }}>
+                          <span>
+                            Chat Response
+                            <br /> Rate
+                          </span>
+                          <p className="pt-3">10%</p>
+                        </div>
                       </td>
                     </tr>
                   </tbody>
@@ -216,7 +246,7 @@ const ProductDetail = () => {
               </div>
             </div>
             <div className="col-12 bg-seconday"></div>
-            <div className="col-10">
+            <div className="col-12 mt-3">
               <p className="rating-reviews-title">Ratings & Reviews</p>
               <div className="ratings-counter d-flex">
                 <span>This product has no reviews.</span>
@@ -236,19 +266,6 @@ const ProductDetail = () => {
                     <img src="" alt="" />
                   </div>
                 </div> */}
-              </div>
-            </div>
-            <div className="col-2">
-              <h5 className="people-who-viewed-this">
-                People Who Viewed This....
-              </h5>
-              <div className="card who-viewed-this-card">
-                <img src={diaper} className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <p className="card-text">Mamy Poko Pants</p>
-                  <p className="who-viewed-this-price">Rs. 409</p>
-                  <img src="" alt="" />
-                </div>
               </div>
             </div>
           </div>

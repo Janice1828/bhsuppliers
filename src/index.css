@@ -13,6 +13,9 @@
   line-height: 25px;
   color: #fff !important;
 }
+.object-fit {
+  object-fit: contain;
+}
 .nav {
   background-color: #f85606;
   color: #fff;
@@ -612,9 +615,12 @@ footer {
   padding: 2px 8px;
   font-weight: 300;
 }
+.deliver-subtitles-location {
+  width: 181px;
+}
 .buy-now,
 .add-to-cart {
-  width: 225px;
+  width: 205px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;

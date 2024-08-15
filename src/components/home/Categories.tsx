@@ -13,7 +13,10 @@ const Categories = ({
   return (
     <>
       <div className="category-product col-2 p-0 border-none">
-        <Link to={`/products?id=${id}`} className="text-decoration-none">
+        <Link
+          to={`/products?id=${id}&categoryname=${categoryName}`}
+          className="text-decoration-none"
+        >
           <div className="card rounded-0 border-light">
             <div className="card-body pb-4 border-none">
               <div className="card-content d-flex flex-column align-items-center">

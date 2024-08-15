@@ -16,7 +16,7 @@ const Filter = () => {
             {categoryList.map((category, key) => (
               <li className="list-group-iem" key={key}>
                 <Link
-                  to={`/products?id=${category.id}`}
+                  to={`/products?id=${category.id}&categoryname=${category.name}`}
                   className="text-decoration-none filter-link"
                 >
                   {category.name}

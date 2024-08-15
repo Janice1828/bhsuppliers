@@ -215,7 +215,7 @@
   color: rgb(158, 158, 158);
 }
 .productlist-product-img {
-  height: 50px;
+  height: 200px;
 }
 #filters-list-heading {
   font-size: 20px !important;
@@ -345,6 +345,7 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+  margin-top: 10px;
 }
 .productlist-sold-numbers,
 .productlist-products-rating {

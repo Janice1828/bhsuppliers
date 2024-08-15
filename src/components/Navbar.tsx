@@ -71,7 +71,7 @@ const Navbar = () => {
               <img src={languageLogo} alt="" id="language-logo" />
               <span id="language">EN</span>
             </div>
-            <Link to="#">
+            <Link to="/cart">
               <img src={cartImg} alt="" id="nav-cart-img" />
             </Link>
           </div>

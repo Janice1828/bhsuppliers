@@ -11,6 +11,9 @@ const Products = () => {
   const id = params.get("id");
   const categoryName = params.get("categoryname");
   const [displayingProducts, setDisplayingProducts] = useState<any[]>([]);
+  const [sortDisplayingProducts, setSortDisplayingProducts] = useState<any[]>(
+    []
+  );
   useEffect(() => {
     axios.get("products_two.json").then((data) => {
       const fetchedData = data.data;
@@ -19,24 +22,20 @@ const Products = () => {
           return product;
         }
       });
+      setSortDisplayingProducts(filteredCategories);
       setDisplayingProducts(filteredCategories);
     });
   }, []);
   function sortProducts(event: React.ChangeEvent<HTMLSelectElement>) {
     const value: number = Number(event.target.value);
     if (value == 1) {
-      const sortByHIghToLow = displayingProducts.sort(
-        (a, b) => b.price - a.price
-      );
-      console.log(sortByHIghToLow);
-      setDisplayingProducts(sortByHIghToLow);
+      sortDisplayingProducts.sort((a, b) => b.price - a.price);
+      console.log([...sortDisplayingProducts]);
+      setDisplayingProducts(sortDisplayingProducts);
     } else {
-      const sortByLowToHigh = displayingProducts.sort(
-        (a, b) => a.price - b.price
-      );
-      console.log(sortByLowToHigh);
-
-      setDisplayingProducts(sortByLowToHigh);
+      sortDisplayingProducts.sort((a, b) => a.price - b.price);
+      console.log(sortDisplayingProducts);
+      setSortDisplayingProducts([...sortDisplayingProducts]);
     }
   }
   return (

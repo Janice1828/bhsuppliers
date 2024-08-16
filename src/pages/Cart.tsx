@@ -60,6 +60,9 @@ const Cart = () => {
           </div>
         </div>
         <div className="col-3 cart-order-summary">
+          <div>
+            <h4 className="fw-400"></h4>
+          </div>
           <h4>Order Summary</h4>
           <div className="d-flex align-items-center justify-content-between subtotal-details">
             <span className="cart-sub-total">Subtotal (1 items)</span>
@@ -70,7 +73,7 @@ const Cart = () => {
             <span className="cart-shipping-price">Rs.100</span>
           </div>
           <div className="discount-voucher">
-            <form action="">
+            <form action="" className="d-flex gap-2">
               <input type="" placeholder="Enter Voucher Code" />
               <button className="cart-voucher-apply-btn">Apply</button>
             </form>

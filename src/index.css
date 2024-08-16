@@ -906,3 +906,13 @@ footer {
   height: 38px;
   font-size: 14px;
 }
+.cart-voucher-apply-btn {
+  background: #25a5d8;
+  color: #fff;
+  width: 104px;
+  border: none;
+  height: 35px;
+}
+.discount-voucher form input {
+  border: 1px solid #dcdcdc;
+}

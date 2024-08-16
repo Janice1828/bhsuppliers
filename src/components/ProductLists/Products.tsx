@@ -14,6 +14,7 @@ const Products = () => {
   const [sortDisplayingProducts, setSortDisplayingProducts] = useState<any[]>(
     []
   );
+  const [productsListView, setProductsListView] = useState<string>("col-3");
   useEffect(() => {
     axios.get("products_two.json").then((data) => {
       const fetchedData = data.data;
@@ -30,14 +31,18 @@ const Products = () => {
     const value: number = Number(event.target.value);
     if (value == 1) {
       sortDisplayingProducts.sort((a, b) => b.price - a.price);
-      console.log([...sortDisplayingProducts]);
       setDisplayingProducts(sortDisplayingProducts);
     } else {
       sortDisplayingProducts.sort((a, b) => a.price - b.price);
-      console.log(sortDisplayingProducts);
       setSortDisplayingProducts([...sortDisplayingProducts]);
     }
   }
+  const productViewGrid = () => {
+    setProductsListView("col-3");
+  };
+  const productViewList = () => {
+    setProductsListView("col-12");
+  };
   return (
     <div className="row">
       <div className="col-6">
@@ -61,28 +66,27 @@ const Products = () => {
             alt="Grid"
             className="product-view-order cursor-pointer"
             style={{ margin: "0px 6px" }}
+            onClick={productViewGrid}
           />
           <img
             src={List}
             alt="List"
+            onClick={productViewList}
             className="product-view-order cursor-pointer"
           />
         </div>
       </div>
-      {/* <div className="col-12">
-        <button className="products-size-filter-btn">
-          Showing 7.7 Products Only
-        </button>
-      </div> */}
       <div className="col-12 border-1"></div>
       <div className="col-12 row">
         {displayingProducts.map((product) => (
-          <div className="col-3" key={product.id}>
+          <div className={`${productsListView}`} key={product.id}>
             <Product
               title={product.title}
               price={product.price}
               img={product.images[0]}
               id={product.id}
+              listClass={productsListView}
+              test=""
             />
           </div>
         ))}

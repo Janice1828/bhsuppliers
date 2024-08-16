@@ -802,7 +802,8 @@ footer {
   height: 13px;
 }
 .cart-product-img {
-  height: 200px;
+  height: 80px;
+  width: 80px;
 }
 .selected-items div:first-child a {
   font-size: 14px;
@@ -871,6 +872,9 @@ footer {
   font-weight: 400;
   color: rgb(117, 117, 117);
 }
+.cart-sub-total {
+  padding: 15px 0px;
+}
 .subtotal-details .cart-subtotal-product-price,
 .cart-shipping-price {
   font-size: 16px;
@@ -878,7 +882,10 @@ footer {
   font-weight: 400;
   color: rgb(32, 32, 32);
 }
-
+.discount-voucher form input {
+  font-size: 14px;
+  padding: 9px 10px;
+}
 .cart-total {
   font-size: 14px;
   line-height: 16px;
@@ -911,8 +918,26 @@ footer {
   color: #fff;
   width: 104px;
   border: none;
-  height: 35px;
+  height: 40px;
 }
 .discount-voucher form input {
   border: 1px solid #dcdcdc;
+  outline: none;
+}
+.cart-location-img {
+  height: 20px;
+}
+.cart-location {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+}
+.main {
+  background: #f4f4f4;
+}
+.location-title {
+  font-size: 14px !important;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgb(158, 158, 158) !important;
 }

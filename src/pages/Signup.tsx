@@ -76,7 +76,12 @@ const Signup = () => {
                     <br /> via SMS
                   </label>
                 </div>
-                <button className="signup-btn">SIGN UP</button>
+                <button
+                  className="signup-btn"
+                  onClick={() => alert("Work On Progress ! ")}
+                >
+                  SIGN UP
+                </button>
               </div>
               <div className="col-6">
                 <label htmlFor="password" className="signup-form-label d-block">
@@ -157,7 +162,9 @@ const Signup = () => {
                       className="signup-facebook-icon"
                       alt=""
                     />
-                    <span>Facebook</span>
+                    <span onClick={() => alert("Work On Progress ! ")}>
+                      Facebook
+                    </span>
                   </Link>
                   <Link
                     to="#"
@@ -169,7 +176,10 @@ const Signup = () => {
                       alt=""
                     />
 
-                    <span>Google</span>
+                    <span onClick={() => alert("Work On Progress ! ")}>
+                      {" "}
+                      Google
+                    </span>
                   </Link>
                 </div>
               </div>

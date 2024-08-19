@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Delete from "../Icons/bin.png";
-import Diaper from "../Images/diaper.jpg";
-import Whilist from "../Icons/love.png";
 import Location from "../Icons/pin.png";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FooterContent from "../components/FooterContent";
+import axios from "axios";
+import { useState } from "react";
+import AddedInCartProduct from "../components/purchasingproducts/AddedInCartProduct";
 const Cart = () => {
+  const fetchedData = localStorage.getItem("cartAddedProducts");
+  const arr: any[] = fetchedData ? JSON.parse(fetchedData) : [];
+  const [addedProducts, setAddedProducts] = useState<any[]>([]);
+  useEffect(() => {
+    axios.get("products_two.json").then((data) => {
+      const fetchedData = data.data;
+      const filteredData: any[] = fetchedData.filter((product: any) => {
+        for (let i = 0; i < arr.length; i++) {
+          if (product.id == arr[i].productId) {
+            return product;
+          }
+        }
+      });
+      setAddedProducts(filteredData);
+    });
+  }, []);
+  console.log(addedProducts);
   return (
     <>
       <Navbar />
@@ -30,45 +48,14 @@ const Cart = () => {
                   <input type="checkbox" />{" "}
                   <Link to="#">Day to Day Online Store</Link>
                 </div>
-
-                <div className="d-flex justify-content-between">
-                  <div>
-                    <div className="d-flex align-items-center gap-2">
-                      <input type="checkbox" />
-                      <img src={Diaper} alt="" className="cart-product-img" />
-                      <div className="d-flex flex-column">
-                        <span className="cart-product-title">
-                          Door guard 39
-                        </span>
-                        <span className="cart-product-details">
-                          No brand, color Family: Brown
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="d-flex gap-4">
-                    <div className="d-flex flex-column">
-                      <span className="cart-product-discounted-price">
-                        Rs. 100
-                      </span>
-                      <span
-                        className="cart-product-original-price"
-                        style={{ marginBottom: "10px" }}
-                      >
-                        <s>Rs. 100</s>
-                      </span>
-                      <div className="d-flex gap-2 product-action-icons">
-                        <img src={Whilist} alt="" />
-                        <img src={Delete} alt="" />
-                      </div>
-                    </div>
-                    <div className="d-flex align-items-center gap-1">
-                      <button className="cart-qty-btns">-</button>
-                      <span className="cart-qty">1</span>
-                      <button className="cart-qty-btns">+</button>
-                    </div>
-                  </div>
-                </div>
+                {addedProducts.map((item, key) => (
+                  <AddedInCartProduct
+                    key={item.id}
+                    title={item.title}
+                    img={item.images}
+                    price={item.price}
+                  />
+                ))}
               </div>
             </div>
             <div className="col-4 cart-order-summary bg-light py-3 px-3">
@@ -103,7 +90,12 @@ const Cart = () => {
                 <span className="cart-total">Total</span>
                 <span className="cart-total-price">Rs.200</span>
               </div>
-              <button className="checkout-btn">PROCEED TO CHECKOUT(1)</button>
+              <button
+                className="checkout-btn"
+                onClick={() => alert("Work On Progress")}
+              >
+                PROCEED TO CHECKOUT(1)
+              </button>
             </div>
           </div>
         </div>

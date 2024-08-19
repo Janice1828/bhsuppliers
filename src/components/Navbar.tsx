@@ -48,6 +48,7 @@ const Navbar = () => {
           </Link>
           <form action="#" className="w-100">
             <input
+              onClick={() => alert("Work On Progress ! ")}
               type="text"
               className="w-100 px-3 py-2 border"
               id="nav-search-input"
@@ -67,7 +68,10 @@ const Navbar = () => {
             <Link to="/signup" className="signup-link text-decoration-none">
               <span>Signup</span>
             </Link>
-            <div className="d-flex align-items-center gap-1 cursor-pointer">
+            <div
+              className="d-flex align-items-center gap-1 cursor-pointer"
+              onClick={() => alert("Work On Progress ! ")}
+            >
               <img src={languageLogo} alt="" id="language-logo" />
               <span id="language">EN</span>
             </div>

@@ -12,7 +12,10 @@ import Chat from "../Icons/chat.png";
 import Ratingstar from "../Icons/rating-star.png";
 import { useState } from "react";
 import axios from "axios";
+import { get } from "http";
+import { useNavigate } from "react-router-dom";
 const ProductDetail = () => {
+  const navigate = useNavigate();
   const search = window.location.search;
   const params = new URLSearchParams(search);
   const productId = params.get("id");
@@ -27,7 +30,33 @@ const ProductDetail = () => {
       setProductDetail(displayingProductDetail[0]);
     });
   }, []);
+  const [quantityCount, setQuantityCount] = useState<any>(1);
 
+  const decreaseQuantityCount = () => {
+    quantityCount > 1
+      ? setQuantityCount(quantityCount - 1)
+      : setQuantityCount(1);
+  };
+  const increaseQuantityCount = () => {
+    setQuantityCount(quantityCount + 1);
+  };
+  const addToCartProducts = () => {
+    const getData = localStorage.getItem("cartAddedProducts");
+    const newData = `{ "productId": ${productId}, "productQty": ${quantityCount} }`;
+    if (getData) {
+      const getDataArr = JSON.parse(getData);
+      getDataArr.push(JSON.parse(newData));
+      console.log(getDataArr);
+      localStorage.setItem("cartAddedProducts", JSON.stringify(getDataArr));
+      navigate("/cart");
+    } else {
+      localStorage.setItem("cartAddedProducts", `[${newData}]`);
+      navigate("/cart");
+    }
+  };
+  const buyNow = () => {
+    alert("Work In Progress !");
+  };
   return (
     <>
       <div>
@@ -116,27 +145,39 @@ const ProductDetail = () => {
                     <div className="d-flex gap-3 align-items-center">
                       <span className="w-auto quantity">Quantity</span>
                       <div className="d-flex align-items-center gap-1">
-                        <button className="productDetail-qty-btns">-</button>
-                        <span className="productDetail-qty">1</span>
-                        <button className="productDetail-qty-btns">+</button>
+                        <button
+                          className="productDetail-qty-btns"
+                          onClick={decreaseQuantityCount}
+                        >
+                          -
+                        </button>
+                        <span className="productDetail-qty">
+                          {quantityCount}
+                        </span>
+                        <button
+                          className="productDetail-qty-btns"
+                          onClick={increaseQuantityCount}
+                        >
+                          +
+                        </button>
                       </div>
                     </div>
                     <div className="purchasing-btns d-flex gap-2">
                       <div className="buy-now text-center d-flex align-items-center justify-content-center">
-                        <Link
-                          to="#"
-                          className="text-light text-decoration-none"
+                        <button
+                          onClick={buyNow}
+                          className="text-light text-decoration-none outline-none border-0 bg-transparent"
                         >
                           Buy Now
-                        </Link>
+                        </button>
                       </div>
                       <div className="add-to-cart text-center d-flex align-items-center justify-content-center">
-                        <Link
-                          to="#"
-                          className="text-light text-decoration-none"
+                        <button
+                          className="text-light outline-none bg-transparent border-0 "
+                          onClick={addToCartProducts}
                         >
                           Add To Cart
-                        </Link>
+                        </button>
                       </div>
                     </div>
                   </div>

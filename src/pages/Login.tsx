@@ -35,7 +35,11 @@ const Login = () => {
                 />
               </div>
               <div className="col-6">
-                <button className="login-btn" style={{ marginTop: "17px" }}>
+                <button
+                  className="login-btn"
+                  style={{ marginTop: "17px" }}
+                  onClick={() => alert("Work On Progress ! ")}
+                >
                   LOGIN
                 </button>
               </div>
@@ -60,7 +64,10 @@ const Login = () => {
                   style={{ marginTop: "15px" }}
                 >
                   <img src={Facebook} className="login-facebook-icon" alt="" />
-                  <span>Facebook</span>
+                  <span onClick={() => alert("Work On Progress ! ")}>
+                    {" "}
+                    Facebook
+                  </span>
                 </Link>
               </div>
               <div className="col-6 d-flex justify-content-end">
@@ -82,7 +89,10 @@ const Login = () => {
                     className="login-googleplus-icon"
                     alt=""
                   />
-                  <span>Google</span>
+                  <span onClick={() => alert("Work On Progress ! ")}>
+                    {" "}
+                    Google
+                  </span>
                 </Link>
               </div>
             </form>

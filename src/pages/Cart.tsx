@@ -18,6 +18,7 @@ const Cart = () => {
       const filteredData: any[] = fetchedData.filter((product: any) => {
         for (let i = 0; i < arr.length; i++) {
           if (product.id == arr[i].productId) {
+            product.purchasedQty = arr[i].productQty;
             return product;
           }
         }
@@ -25,7 +26,6 @@ const Cart = () => {
       setAddedProducts(filteredData);
     });
   }, []);
-  console.log(addedProducts);
   return (
     <>
       <Navbar />
@@ -44,16 +44,18 @@ const Cart = () => {
                 </span>
               </div>
               <div className="selected-items bg-light my-3 px-3 pb-3 pt-1">
-                <div className="d-flex align-items-center gap-1">
+                <div className="d-flex align-items-center gap-1 mb-3">
                   <input type="checkbox" />{" "}
                   <Link to="#">Day to Day Online Store</Link>
                 </div>
                 {addedProducts.map((item, key) => (
                   <AddedInCartProduct
                     key={item.id}
+                    id={item.id}
                     title={item.title}
                     img={item.images}
                     price={item.price}
+                    purchasedQty={item.purchasedQty}
                   />
                 ))}
               </div>
@@ -74,11 +76,11 @@ const Cart = () => {
               <h4>Order Summary</h4>
               <div className="d-flex align-items-center justify-content-between subtotal-details">
                 <span className="cart-sub-total">Subtotal (1 items)</span>
-                <span className="cart-subtotal-product-price">Rs. 100</span>
+                <span className="cart-subtotal-product-price">$ 0</span>
               </div>
               <div className="d-flex align-items-center justify-content-between">
                 <span className="cart-shipping-fee">Shipping Fee</span>
-                <span className="cart-shipping-price">Rs.100</span>
+                <span className="cart-shipping-price">$ 0</span>
               </div>
               <div className="discount-voucher mt-5">
                 <form action="" className="d-flex gap-2 justify-content-center">
@@ -88,13 +90,13 @@ const Cart = () => {
               </div>
               <div className="d-flex align-items-center justify-content-between py-4">
                 <span className="cart-total">Total</span>
-                <span className="cart-total-price">Rs.200</span>
+                <span className="cart-total-price">$ 0</span>
               </div>
               <button
                 className="checkout-btn"
                 onClick={() => alert("Work On Progress")}
               >
-                PROCEED TO CHECKOUT(1)
+                PROCEED TO CHECKOUT ({addedProducts.length})
               </button>
             </div>
           </div>

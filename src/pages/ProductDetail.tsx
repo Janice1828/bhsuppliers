@@ -46,7 +46,6 @@ const ProductDetail = () => {
     if (getData) {
       const getDataArr = JSON.parse(getData);
       getDataArr.push(JSON.parse(newData));
-      console.log(getDataArr);
       localStorage.setItem("cartAddedProducts", JSON.stringify(getDataArr));
       navigate("/cart");
     } else {

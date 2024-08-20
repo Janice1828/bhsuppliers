@@ -11,6 +11,9 @@ const Signup = () => {
       <Navbar />
       <div className="signup-container">
         <div className="signup-container-width m-auto pt-5 ">
+          <h2 className="col-12 bg-danger text-light mb-5">
+            Work On Progress{" "}
+          </h2>
           <div className="d-flex align-items-center justify-content-between">
             <h3 className="signup-title">Create Your Daraz Account</h3>
             <span className="login-page-link">

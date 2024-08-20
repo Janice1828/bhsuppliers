@@ -11,6 +11,9 @@ const Login = () => {
       <div className="login-container pt-5">
         <div className="login-container-width m-auto m-0">
           <div className="row m-0">
+            <h2 className="col-12 bg-danger text-light mb-5">
+              Work On Progress !{" "}
+            </h2>
             <h3 className="login-title col-6">
               Welcome to Daraz! Please login.
             </h3>

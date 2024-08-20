@@ -4,7 +4,6 @@ import Delete from "../Icons/bin.png";
 import Location from "../Icons/pin.png";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import FooterContent from "../components/FooterContent";
 import axios from "axios";
 import { useState } from "react";
 import AddedInCartProduct from "../components/purchasingproducts/AddedInCartProduct";

@@ -6,8 +6,10 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import AddedInCartProduct from "../components/purchasingproducts/AddedInCartProduct";
 const Cart = () => {
+  const navigate = useNavigate();
   const fetchedData = localStorage.getItem("cartAddedProducts");
   const arr: any[] = fetchedData ? JSON.parse(fetchedData) : [];
   const [addedProducts, setAddedProducts] = useState<any[]>([]);
@@ -25,6 +27,9 @@ const Cart = () => {
       setAddedProducts(filteredData);
     });
   }, []);
+  const checkout = () => {
+    navigate("/checkout");
+  };
   return (
     <>
       <Navbar />
@@ -91,10 +96,7 @@ const Cart = () => {
                 <span className="cart-total">Total</span>
                 <span className="cart-total-price">$ 0</span>
               </div>
-              <button
-                className="checkout-btn"
-                onClick={() => alert("Work On Progress")}
-              >
+              <button className="checkout-btn" onClick={checkout}>
                 PROCEED TO CHECKOUT ({addedProducts.length})
               </button>
             </div>

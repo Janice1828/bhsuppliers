@@ -42,14 +42,24 @@ const ProductDetail = () => {
   };
   const addToCartProducts = () => {
     const getData = localStorage.getItem("cartAddedProducts");
-    const newData = `{ "productId": ${productId}, "productQty": ${quantityCount} }`;
+    const newProduct = `{ "productId": ${productId}, "productQty": ${quantityCount} }`;
     if (getData) {
-      const getDataArr = JSON.parse(getData);
-      getDataArr.push(JSON.parse(newData));
-      localStorage.setItem("cartAddedProducts", JSON.stringify(getDataArr));
+      const fetchedDataArr: any[] = getData ? JSON.parse(getData) : [];
+      let checkingExistingDataFlag = false;
+      let updatedDataArr = fetchedDataArr.map((item) => {
+        if (item.productId == productId) {
+          item.productQty += quantityCount;
+          checkingExistingDataFlag = true;
+        }
+        return item;
+      });
+      if (checkingExistingDataFlag == false) {
+        updatedDataArr.push(JSON.parse(newProduct));
+      }
+      localStorage.setItem("cartAddedProducts", JSON.stringify(updatedDataArr));
       navigate("/cart");
     } else {
-      localStorage.setItem("cartAddedProducts", `[${newData}]`);
+      localStorage.setItem("cartAddedProducts", `[${newProduct}]`);
       navigate("/cart");
     }
   };

@@ -4,19 +4,24 @@ import Diaper from "../../Images/diaper.jpg";
 import Delete from "../../Icons/bin.png";
 import { useState } from "react";
 import { get } from "http";
+import axios from "axios";
+import { useGlobalContext } from "../../context/CartProductsContext";
 const AddedInCartProduct = ({
   title,
   img,
   price,
   purchasedQty,
   id,
+  data,
 }: {
   id: number;
   title: string;
   img: string;
   price: number;
   purchasedQty: number;
+  data: any[];
 }) => {
+  const { addedProducts, setAddedProducts } = useGlobalContext();
   const [trackQty, setTrackQty] = useState<number>(purchasedQty);
   const increaseQty = () => {
     setTrackQty(trackQty + 1);
@@ -35,6 +40,18 @@ const AddedInCartProduct = ({
       if (product.productId != id) {
         return product;
       }
+    });
+    axios.get("products_two.json").then((data) => {
+      const fetchedData = data.data;
+      const filteredData: any[] = fetchedData.filter((product: any) => {
+        for (let i = 0; i < filterData.length; i++) {
+          if (product.id == filterData[i].productId) {
+            product.purchasedQty = filterData[i].productQty;
+            return product;
+          }
+        }
+      });
+      setAddedProducts(filteredData);
     });
     localStorage.setItem("cartAddedProducts", JSON.stringify(filterData));
   };

@@ -50,10 +50,10 @@ const Cart = () => {
                   </span>
                 </div>
                 <div className="selected-items bg-light my-3 px-3 pb-3 pt-1">
-                  <div className="d-flex align-items-center gap-1 mb-3">
+                  {/* <div className="d-flex align-items-center gap-1 mb-3">
                     <input type="checkbox" />{" "}
                     <Link to="#">Day to Day Online Store</Link>
-                  </div>
+                  </div> */}
                   {addedProducts.map((item, key) => (
                     <AddedInCartProduct
                       key={item.id}
@@ -87,9 +87,9 @@ const Cart = () => {
                 </div>
                 <div className="d-flex align-items-center justify-content-between">
                   <span className="cart-shipping-fee">Shipping Fee</span>
-                  <span className="cart-shipping-price">$ 0</span>
+                  <span className="cart-shipping-price">$ 10</span>
                 </div>
-                <div className="discount-voucher mt-5">
+                {/* <div className="discount-voucher mt-5">
                   <form
                     action=""
                     className="d-flex gap-2 justify-content-center"
@@ -97,7 +97,7 @@ const Cart = () => {
                     <input type="" placeholder="Enter Voucher Code" />
                     <button className="cart-voucher-apply-btn">Apply</button>
                   </form>
-                </div>
+                </div> */}
                 <div className="d-flex align-items-center justify-content-between py-4">
                   <span className="cart-total">Total</span>
                   <span className="cart-total-price">$ 0</span>

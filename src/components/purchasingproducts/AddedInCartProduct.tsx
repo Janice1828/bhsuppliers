@@ -24,10 +24,26 @@ const AddedInCartProduct = ({
   const { addedProducts, setAddedProducts } = useGlobalContext();
   const [trackQty, setTrackQty] = useState<number>(purchasedQty);
   const increaseQty = () => {
+    const getLocalData = localStorage.getItem("cartAddedProducts");
+    const localDataArr: any[] = getLocalData ? JSON.parse(getLocalData) : [];
+    for (let i = 0; i < localDataArr.length; i++) {
+      if (localDataArr[i].productId == id) {
+        localDataArr[i].productQty += 1;
+      }
+    }
+    localStorage.setItem("cartAddedProducts", JSON.stringify(localDataArr));
     setTrackQty(trackQty + 1);
   };
   const decreaseQty = () => {
     if (trackQty > 1) {
+      const getLocalData = localStorage.getItem("cartAddedProducts");
+      const localDataArr: any[] = getLocalData ? JSON.parse(getLocalData) : [];
+      for (let i = 0; i < localDataArr.length; i++) {
+        if (localDataArr[i].productId == id) {
+          localDataArr[i].productQty -= 1;
+        }
+      }
+      localStorage.setItem("cartAddedProducts", JSON.stringify(localDataArr));
       setTrackQty(trackQty - 1);
     }
   };

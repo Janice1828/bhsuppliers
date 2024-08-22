@@ -8,7 +8,7 @@ import Products from "../components/ProductLists/Products";
 const ProductLists = () => {
   const search = window.location.search;
   const params = new URLSearchParams(search);
-  const categoryName = params.get("categoryname");
+  const categoryName = params ? params.get("categoryname") : "";
   return (
     <>
       <Navbar />
@@ -20,7 +20,7 @@ const ProductLists = () => {
           </p>
         </div>
         <div className="col-3">
-          <Filters />
+          <Filters categoryName={categoryName ? categoryName : ""} />
         </div>
         <div className="col-9">
           <Products />

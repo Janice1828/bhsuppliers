@@ -52,7 +52,7 @@ const Product = ({
                 </div>
               </div>
             </div>
-            <p className="productlist-product-price">Rs.{price}</p>
+            <p className="productlist-product-price">$ {price}</p>
           </div>
         </div>
       </div>

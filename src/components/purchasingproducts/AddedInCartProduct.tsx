@@ -119,7 +119,6 @@ const AddedInCartProduct = ({
       const subTotal = filteredData.reduce((accum, nextData) => {
         return accum + nextData.price * nextData.purchasedQty;
       }, 0);
-      // console.log(subTotal);
       setSubTotal(subTotal);
       setTotal(subTotal + shippingFee);
     });

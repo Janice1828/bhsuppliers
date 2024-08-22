@@ -1,6 +1,30 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import Product from "./Product";
+import { useState } from "react";
+import axios from "axios";
 const CheckingoutProducts = () => {
+  const [checkingOutProducts, setCheckingOutProducts] = useState<any[]>([]);
+  const [subTotal, setSubTotal] = useState<any>(0);
+  useEffect(() => {
+    axios.get("products_two.json").then((data) => {
+      const fetchedData = data.data;
+      const localData = localStorage.getItem("cartAddedProducts");
+      const localDataArr = localData ? JSON.parse(localData) : [];
+      const filteredData: any[] = fetchedData.filter((product: any) => {
+        for (let i = 0; i < localDataArr.length; i++) {
+          if (product.id == localDataArr[i].productId) {
+            product.purchasedQty = localDataArr[i].productQty;
+            return product;
+          }
+        }
+      });
+      const subTotal = filteredData.reduce((accum, nextData) => {
+        return accum + nextData.price * nextData.purchasedQty;
+      }, 0);
+      setSubTotal(subTotal);
+      setCheckingOutProducts(filteredData);
+    });
+  }, []);
   return (
     <div className="bg-white mt-3">
       <div className="shipping-products-title d-flex justify-content-between">
@@ -39,22 +63,15 @@ const CheckingoutProducts = () => {
             </div>
           </div>
         </div>
-        <div className="d-flex justify-content-between mt-5">
-          <div className="d-flex gap-2">
-            <img src="" alt="" />
-            <div>
-              <p className="checkout-product-title mb-0">Product Title</p>
-              <span className="checkout-product-details">No brand, Color</span>
-            </div>
-          </div>
-          <div>
-            <p className="checkout-product-price">$ 30</p>
-            <img src="" alt="" />
-          </div>
-          <div>
-            <span className="checkout-product-qty">Qty: 2</span>
-          </div>
-        </div>
+        {checkingOutProducts.map((item) => (
+          <Product
+            key={item.id}
+            title={item.title}
+            price={item.price}
+            qty={item.purchasedQty}
+            img={item.images}
+          />
+        ))}
       </div>
     </div>
   );

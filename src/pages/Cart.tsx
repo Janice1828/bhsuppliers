@@ -30,7 +30,6 @@ const Cart = () => {
         }
       });
       setAddedProducts(filteredData);
-      console.log(filteredData);
       const subTotal = filteredData.reduce((accum, nextData) => {
         return accum + nextData.price * nextData.purchasedQty;
       }, 0);

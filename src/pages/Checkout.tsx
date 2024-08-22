@@ -12,9 +12,6 @@ const Checkout = () => {
       <Navbar />
       <div className="py-4 main">
         <div className="row p-0 w-75 m-auto">
-          <h2 className="col-12 bg-danger text-light mb-5">
-            Work On Progress{" "}
-          </h2>
           <div className="col-8">
             <div>
               <Shippingaddress />

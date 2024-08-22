@@ -22,7 +22,12 @@ const AddedInCartProduct = ({
   data: any[];
 }) => {
   const { addedProducts, setAddedProducts } = useGlobalContext();
+  const { checkoutSelected, setCheckoutSelected } = useGlobalContext();
+  const { totalQty, setTotalQty } = useGlobalContext();
   const [trackQty, setTrackQty] = useState<number>(purchasedQty);
+  const { subTotal, setSubTotal } = useGlobalContext();
+  const { total, setTotal } = useGlobalContext();
+  const shippingFee = 10;
   const increaseQty = () => {
     const getLocalData = localStorage.getItem("cartAddedProducts");
     const localDataArr: any[] = getLocalData ? JSON.parse(getLocalData) : [];
@@ -32,7 +37,29 @@ const AddedInCartProduct = ({
       }
     }
     localStorage.setItem("cartAddedProducts", JSON.stringify(localDataArr));
+
     setTrackQty(trackQty + 1);
+    let totalQty: number = 0;
+    for (let i = 0; i < localDataArr.length; i++) {
+      totalQty += localDataArr[i].productQty;
+    }
+    setTotalQty(totalQty);
+    axios.get("products_two.json").then((data) => {
+      const fetchedData = data.data;
+      const filteredData: any[] = fetchedData.filter((product: any) => {
+        for (let i = 0; i < localDataArr.length; i++) {
+          if (product.id == localDataArr[i].productId) {
+            product.purchasedQty = localDataArr[i].productQty;
+            return product;
+          }
+        }
+      });
+      const subTotal = filteredData.reduce((accum, nextData) => {
+        return accum + nextData.price * nextData.purchasedQty;
+      }, 0);
+      setSubTotal(subTotal);
+      setTotal(subTotal + shippingFee);
+    });
   };
   const decreaseQty = () => {
     if (trackQty > 1) {
@@ -45,6 +72,27 @@ const AddedInCartProduct = ({
       }
       localStorage.setItem("cartAddedProducts", JSON.stringify(localDataArr));
       setTrackQty(trackQty - 1);
+      let totalQty: number = 0;
+      for (let i = 0; i < localDataArr.length; i++) {
+        totalQty += localDataArr[i].productQty;
+      }
+      setTotalQty(totalQty);
+      axios.get("products_two.json").then((data) => {
+        const fetchedData = data.data;
+        const filteredData: any[] = fetchedData.filter((product: any) => {
+          for (let i = 0; i < localDataArr.length; i++) {
+            if (product.id == localDataArr[i].productId) {
+              product.purchasedQty = localDataArr[i].productQty;
+              return product;
+            }
+          }
+        });
+        const subTotal = filteredData.reduce((accum, nextData) => {
+          return accum + nextData.price * nextData.purchasedQty;
+        }, 0);
+        setSubTotal(subTotal);
+        setTotal(subTotal + shippingFee);
+      });
     }
   };
   const deleteProduct = () => {
@@ -68,15 +116,37 @@ const AddedInCartProduct = ({
         }
       });
       setAddedProducts(filteredData);
+      const subTotal = filteredData.reduce((accum, nextData) => {
+        return accum + nextData.price * nextData.purchasedQty;
+      }, 0);
+      // console.log(subTotal);
+      setSubTotal(subTotal);
+      setTotal(subTotal + shippingFee);
     });
     localStorage.setItem("cartAddedProducts", JSON.stringify(filterData));
+  };
+  const selectForCheckOut = () => {
+    // const getData = localStorage.getItem("selectForCheckOut");
+    // const getCartProducts = localStorage.getItem("cartAddedProducts");
+    // const getCartProductsArr = getCartProducts
+    //   ? JSON.parse(getCartProducts)
+    //   : [];
+    // let newData;
+    // for (let i = 0; i < getCartProductsArr.length; i++) {
+    //   if (getCartProductsArr[i].productId == id) {
+    //     newData = getCartProductsArr[i];
+    //   }
+    // }
+    // if (getData) {
+    //   const getDataArr = getData ? JSON.parse(getData) : [];
+    // }
   };
   return (
     <>
       <div className="d-flex justify-content-between mb-3">
         <div>
           <div className="d-flex align-items-center gap-2">
-            <input type="checkbox" />
+            {/* <input type="checkbox" onClick={selectForCheckOut} /> */}
             <img src={img} alt="" className="cart-product-img" />
             <div className="d-flex flex-column">
               <span className="cart-product-title">{title}</span>

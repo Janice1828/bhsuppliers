@@ -11,9 +11,6 @@ const Login = () => {
       <div className="login-container pt-5">
         <div className="login-container-width m-auto m-0">
           <div className="row m-0">
-            <h2 className="col-12 bg-danger text-light mb-5">
-              Work On Progress !{" "}
-            </h2>
             <h3 className="login-title col-6">
               Welcome to Daraz! Please login.
             </h3>
@@ -38,11 +35,7 @@ const Login = () => {
                 />
               </div>
               <div className="col-6">
-                <button
-                  className="login-btn"
-                  style={{ marginTop: "17px" }}
-                  onClick={() => alert("Work On Progress ! ")}
-                >
+                <button className="login-btn" style={{ marginTop: "17px" }}>
                   LOGIN
                 </button>
               </div>
@@ -67,10 +60,7 @@ const Login = () => {
                   style={{ marginTop: "15px" }}
                 >
                   <img src={Facebook} className="login-facebook-icon" alt="" />
-                  <span onClick={() => alert("Work On Progress ! ")}>
-                    {" "}
-                    Facebook
-                  </span>
+                  <span>Facebook</span>
                 </Link>
               </div>
               <div className="col-6 d-flex justify-content-end">
@@ -92,10 +82,7 @@ const Login = () => {
                     className="login-googleplus-icon"
                     alt=""
                   />
-                  <span onClick={() => alert("Work On Progress ! ")}>
-                    {" "}
-                    Google
-                  </span>
+                  <span> Google</span>
                 </Link>
               </div>
             </form>

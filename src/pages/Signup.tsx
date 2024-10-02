@@ -11,9 +11,6 @@ const Signup = () => {
       <Navbar />
       <div className="signup-container">
         <div className="signup-container-width m-auto pt-5 ">
-          <h2 className="col-12 bg-danger text-light mb-5">
-            Work On Progress{" "}
-          </h2>
           <div className="d-flex align-items-center justify-content-between">
             <h3 className="signup-title">Create Your Daraz Account</h3>
             <span className="login-page-link">
@@ -79,12 +76,7 @@ const Signup = () => {
                     <br /> via SMS
                   </label>
                 </div>
-                <button
-                  className="signup-btn"
-                  onClick={() => alert("Work On Progress ! ")}
-                >
-                  SIGN UP
-                </button>
+                <button className="signup-btn">SIGN UP</button>
               </div>
               <div className="col-6">
                 <label htmlFor="password" className="signup-form-label d-block">
@@ -165,9 +157,7 @@ const Signup = () => {
                       className="signup-facebook-icon"
                       alt=""
                     />
-                    <span onClick={() => alert("Work On Progress ! ")}>
-                      Facebook
-                    </span>
+                    <span>Facebook</span>
                   </Link>
                   <Link
                     to="#"
@@ -179,10 +169,7 @@ const Signup = () => {
                       alt=""
                     />
 
-                    <span onClick={() => alert("Work On Progress ! ")}>
-                      {" "}
-                      Google
-                    </span>
+                    <span> Google</span>
                   </Link>
                 </div>
               </div>

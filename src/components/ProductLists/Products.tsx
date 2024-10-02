@@ -5,12 +5,14 @@ import List from "../../Icons/list.png";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { ProductListsFilterContext } from "./context/FilterContext";
 const Products = () => {
   const search = window.location.search;
   const params = new URLSearchParams(search);
   const id = params.get("id");
   const categoryName = params.get("categoryname");
-  const [displayingProducts, setDisplayingProducts] = useState<any[]>([]);
+  const { displayingProducts, setDisplayingProducts } =
+    ProductListsFilterContext();
   const [sortDisplayingProducts, setSortDisplayingProducts] = useState<any[]>(
     []
   );

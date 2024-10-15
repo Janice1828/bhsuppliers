@@ -42,14 +42,14 @@ const Filters = ({
   useEffect(() => {
     let filterData: any[] = categoryFilteredProducts;
     if (selectedBrands.length > 0) {
-      filterData = categoryFilteredProducts.filter((product) => {
-        return selectedBrands.includes(product.brand);
-      });
+      filterData = filterData.filter((item) =>
+        selectedBrands.includes(item.brand)
+      );
     }
     if (selectedColors.length > 0) {
-      filterData = categoryFilteredProducts.filter((product) => {
-        return selectedColors.includes(product.color);
-      });
+      filterData = filterData.filter((item) =>
+        selectedColors.includes(item.color)
+      );
     }
     updateProducts(filterData);
   }, [selectedBrands, selectedColors]);

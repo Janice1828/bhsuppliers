@@ -7,67 +7,52 @@ import Location from "./Filterlists/Location";
 import Size from "./Filterlists/Size";
 import Warrentytype from "./Filterlists/Warrentytype";
 import Services from "./Filterlists/Services";
-import axios from "axios";
 import { ProductListsFilterContext } from "./context/FilterContext";
-const Filters = ({ categoryName }: { categoryName: string }) => {
-  const search = window.location.search;
-  const params = new URLSearchParams(search);
-  const categoryID = params.get("id");
-  const [brands, setBrand] = useState<any[]>([]);
-  const [colors, setColors] = useState<any[]>([]);
-  const [fetchedData, setFetchedData] = useState<any[]>([]);
-  const [checkedBrand, setCheckedBrand] = useState<any[]>([]);
-  useEffect(() => {
-    setCheckedBrand(new Array(brands.length).fill(false));
-  }, [brands]);
-  useEffect(() => {
-    axios.get("products_two.json").then((data) => {
-      const fetchData = data.data;
-      const getBrands = [];
-      const getColors = [];
-      for (let i = 0; i < fetchData.length; i++) {
-        if (fetchData[i].category == categoryID) {
-          getBrands.push(fetchData[i].brand);
-          getColors.push(fetchData[i].color);
-        }
-      }
-      const removedDuplicateBrands: any[] = Array.from(new Set(getBrands));
-      const removedDuplicateColors: any[] = Array.from(new Set(getColors));
-      setBrand(removedDuplicateBrands);
-      setColors(removedDuplicateColors);
-      setFetchedData(fetchData);
-    });
-  }, []);
-  // const { displayingProducts, setDisplayingProducts } =
-  //   ProductListsFilterContext();
-  // const brandFilter = (e: React.FormEvent<HTMLInputElement>) => {
-  //   const checkedBrandName = (e.target as HTMLTextAreaElement).value;
-  //   const checkedBrandIndex = brands.indexOf(checkedBrandName);
-  //   const updatedCheckedBrandList = checkedBrand.map((item, ind) =>
-  //     ind == checkedBrandIndex ? !item : item
-  //   );
-  // console.log(updatedCheckedBrandList);
-  // working properly till this line.
-  // setCheckedBrand(updatedCheckedBrandList);
-  // console.log(checkedBrand);
-  // const newFilteredData = brands.filter((item, ind) => {
-  //   if (updatedCheckedBrandList[ind] == true) {
-  //     return item;
-  //   }
-  // });
-  // console.log(newFilteredData);
-  // const finalData = fetchedData.filter((item) => {
-  //   if (newFilteredData.includes(item.brand)) {
-  //     return item;
-  //   }
-  // });
-  // setDisplayingProducts(finalData);
-  // };
-  
+const Filters = ({
+  brandsList,
+  colorList,
+  updateProducts,
+  categoryFilteredProducts,
+}: {
+  brandsList: any[];
+  colorList: string[];
+  updateProducts: any;
+  categoryFilteredProducts: any[];
+}) => {
+  const [selectedBrands, setSelectedBrands] = useState<any[]>([]);
+  const [selectedColors, setSelectedColors] = useState<string[]>([]);
   const brandFilter = (event: any) => {
-    console.log(event.target.value);
+    if (event.target.checked) {
+      setSelectedBrands([...selectedBrands, event.target.value]);
+    } else {
+      setSelectedBrands(
+        selectedBrands.filter((brand) => brand !== event.target.value)
+      );
+    }
   };
-
+  const handleColorFilter = (event: any) => {
+    if (event.target.checked) {
+      setSelectedColors([...selectedColors, event.target.value]);
+    } else {
+      setSelectedColors(
+        selectedColors.filter((color) => color !== event.target.value)
+      );
+    }
+  };
+  useEffect(() => {
+    let filterData: any[] = categoryFilteredProducts;
+    if (selectedBrands.length > 0) {
+      filterData = categoryFilteredProducts.filter((product) => {
+        return selectedBrands.includes(product.brand);
+      });
+    }
+    if (selectedColors.length > 0) {
+      filterData = categoryFilteredProducts.filter((product) => {
+        return selectedColors.includes(product.color);
+      });
+    }
+    updateProducts(filterData);
+  }, [selectedBrands, selectedColors]);
   return (
     <div>
       <p id="filters-list-heading">Filters</p>
@@ -82,7 +67,7 @@ const Filters = ({ categoryName }: { categoryName: string }) => {
           <h5 className="productlist-filters-title">Brand</h5>
           <div className="brands-list">
             <div className="brands d-flex align-items-center gap-2 align-items-center flex-wrap">
-              {brands.map((item, key) => (
+              {brandsList.map((item, key) => (
                 <div key={key} className="d-flex align-items-center gap-1">
                   {" "}
                   <input
@@ -104,10 +89,20 @@ const Filters = ({ categoryName }: { categoryName: string }) => {
         <div>
           <h5 className="productlist-filters-title">Color</h5>
           <div className="colors-list d-flex flex-wrap gap-2">
-            {colors.map((item, key) => (
-              <div className="colors cursor-pointer" key={key}>
-                <label htmlFor={item}>{item}</label>
-                <input type="checkbox" id={item} className="d-none" />
+            {colorList.map((item, key) => (
+              <div
+                className="cursor-pointer d-flex align-items-center gap-1"
+                key={key}
+              >
+                <input
+                  type="checkbox"
+                  value={item}
+                  id={item}
+                  onChange={handleColorFilter}
+                />
+                <label htmlFor={item} className="cursor-pointer">
+                  {item}
+                </label>
               </div>
             ))}
           </div>

@@ -6,34 +6,48 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import { ProductListsFilterContext } from "./context/FilterContext";
-const Products = () => {
-  const search = window.location.search;
-  const params = new URLSearchParams(search);
-  const id = params.get("id");
-  const categoryName = params.get("categoryname");
-  const { displayingProducts, setDisplayingProducts } =
-    ProductListsFilterContext();
+// interface Product {
+//   id: number;
+//   title: string;
+// }
+// interface newData {
+//   productProps: Product[];
+// }
+const Products = ({ data }: { data: any[] }) => {
+  const listProducts: string[] = [];
+  // console.log(data);
+  // console.log(displayingProducts);
+  // let filteredData = displayingProducts.displayingProducts;
+  // console.log(filteredData);
+  // console.log(displayingProducts.displayingProducts);
+  // const search = window.location.search;
+  // const params = new URLSearchParams(search);
+  // const id = params.get("id");
+  // const categoryName = params.get("categoryname");
+  // const { displayingProducts, setDisplayingProducts } =
+  //   ProductListsFilterContext();
   const [sortDisplayingProducts, setSortDisplayingProducts] = useState<any[]>(
     []
   );
   const [productsListView, setProductsListView] = useState<string>("col-3");
-  useEffect(() => {
-    axios.get("products_two.json").then((data) => {
-      const fetchedData = data.data;
-      const filteredCategories = fetchedData.filter((product: any) => {
-        if (product.category == id) {
-          return product;
-        }
-      });
-      setSortDisplayingProducts(filteredCategories);
-      setDisplayingProducts(filteredCategories);
-    });
-  }, []);
+  // useEffect(() => {
+  //   axios.get("products_two.json").then((data) => {
+  //     const fetchedData = data.data;
+  //     const filteredCategories = fetchedData.filter((product: any) => {
+  //       if (product.category == id) {
+  //         return product;
+  //       }
+  //     });
+  //     console.log(filteredCategories);
+  // setSortDisplayingProducts(filteredCategories);
+  // setDisplayingProducts(filteredCategories);
+  //   });
+  // }, []);
   function sortProducts(event: React.ChangeEvent<HTMLSelectElement>) {
     const value: number = Number(event.target.value);
     if (value == 1) {
       sortDisplayingProducts.sort((a, b) => b.price - a.price);
-      setDisplayingProducts(sortDisplayingProducts);
+      // setDisplayingProducts(sortDisplayingProducts);
     } else {
       sortDisplayingProducts.sort((a, b) => a.price - b.price);
       setSortDisplayingProducts([...sortDisplayingProducts]);
@@ -49,7 +63,7 @@ const Products = () => {
     <div className="row">
       <div className="col-6">
         <span className="founded-items-number">
-          {displayingProducts.length} items found for "{`${categoryName}`}"
+          {/* {displayingProducts.length} items found for "{`${categoryName}`}" */}
         </span>
       </div>
       <div className="col-6 d-flex gap-3">
@@ -80,7 +94,7 @@ const Products = () => {
       </div>
       <div className="col-12 border-1"></div>
       <div className="col-12 row">
-        {displayingProducts.map((product) => (
+        {data.map((product) => (
           <div className={`${productsListView}`} key={product.id}>
             <Product
               title={product.title}

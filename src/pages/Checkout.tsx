@@ -12,7 +12,7 @@ const Checkout = () => {
       <Navbar />
       <div className="py-4 main">
         <div className="row p-0 w-75 m-auto">
-          <div className="col-8">
+          <div className="col-lg-8">
             <div>
               <Shippingaddress />
             </div>
@@ -20,7 +20,7 @@ const Checkout = () => {
               <CheckingoutProducts />
             </div>
           </div>
-          <div className="col-4">
+          <div className="col-lg-4">
             <Payment />
           </div>
         </div>

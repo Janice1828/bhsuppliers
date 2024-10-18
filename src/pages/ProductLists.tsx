@@ -10,6 +10,7 @@ const ProductLists = () => {
   const search = window.location.search;
   const params = new URLSearchParams(search);
   const categoryName = params ? params.get("categoryname") : "";
+  const productTitle = params ? params.get("title") : "";
   const categoryID: any = params ? params.get("id") : "";
   const [filteredProducts, setFilteredProducts] = useState<any[]>([]);
   const [brands, setBrands] = useState<string[]>([]);
@@ -20,7 +21,12 @@ const ProductLists = () => {
       .then((res) => res.json())
       .then((data) => {
         let categoryFilteredData: any[] = data.filter((product: any) => {
-          return product.category == categoryID;
+          if (
+            product.category == categoryID ||
+            product.title.toLowerCase().includes(productTitle?.toLowerCase())
+          ) {
+            return product;
+          }
         });
         setFilteredProducts(categoryFilteredData);
         setDisplayingData(categoryFilteredData);
@@ -46,7 +52,7 @@ const ProductLists = () => {
             <span className="text-primary opacity-75">{categoryName}</span>
           </p>
         </div>
-        <div className="col-3">
+        <div className="col-sm-3">
           <Filters
             brandsList={brands}
             colorList={colors}
@@ -54,8 +60,8 @@ const ProductLists = () => {
             categoryFilteredProducts={filteredProducts}
           />
         </div>
-        <div className="col-9">
-          <Products data={displayingData} />
+        <div className="col-sm-9">
+          <Products data={displayingData} updateProducts={setDisplayingData} />
         </div>
       </div>
       <Footer />

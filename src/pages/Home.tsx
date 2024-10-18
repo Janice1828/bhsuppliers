@@ -35,18 +35,18 @@ const Home = () => {
           <Navbar />
         </div>
         <div className="products row w-75 m-auto pt-1">
-          <div className="col-3">
+          <div className="col-md-3">
             <Filter />
           </div>
-          <div className="col-9 p-0">
+          <div className="col-md-9 mt-3 mt-md-0 p-0">
             <Sale />
           </div>
           <div className="col-12 pt-3 pb-3">
             <Discount />
           </div>
-          <div className="col-12 row">
+          <div className="col-12 row gx-0">
             <h3 className="home-headings col-12 px-0">Categories</h3>
-            <div className="col-12 row" style={{ gap: "1px" }}>
+            <div className="col-12 row gx-0 m-0 p-0">
               {categories.map((category) => (
                 <Categories
                   key={category.id}
@@ -63,7 +63,7 @@ const Home = () => {
           {/* <div className="col-12 mt-3">
             <Darazmall />
           </div> */}
-          <div className="col-12 mt-3 row">
+          <div className="col-12 mt-3 row gx-0 m-0">
             <h3 className="home-headings px-0">Just For You</h3>
             <div className="col-12 row gy-3 gx-2 mt-0">
               {displayingProducts.map((product) => (

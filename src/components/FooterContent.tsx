@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const FooterContent = () => {
   return (
-    <div className="d-flex justify-content-between w-75 m-auto mt-4 pt-4">
-      <div style={{ paddingRight: "34px" }}>
+    <div className="d-flex flex-wrap flex-xl-nowrap justify-content-between w-75 m-auto mt-4 pt-4">
+      <div className="sm-no-px" style={{ paddingRight: "34px" }}>
         <h5 className="footer-headings">
           Experience Hassle-Free Online Shopping in Nepal with Daraz
         </h5>
-        <p className="footer-content" style={{ width: "257px" }}>
+        <p className="footer-content">
           E-commerce has evolved over the past few years and since it’s easier
           and more convenient, it is evident that customers are actually
           switching to the trend of online shopping. Daraz, the Nepali shopping
@@ -32,8 +32,8 @@ const FooterContent = () => {
           Nepal. The online store
         </p>
       </div>
-      <div style={{ paddingRight: "34px" }}>
-        <p className="footer-content" style={{ width: "258px" }}>
+      <div className="sm-no-px" style={{ paddingRight: "34px" }}>
+        <p className="footer-content">
           is updated daily and new products are added every day to cater to all
           your needs. Visit Daraz.com.np to experience shopping in Nepal as
           never before. Don't forget to Download Daraz App and get exclusive
@@ -78,7 +78,7 @@ const FooterContent = () => {
           Realme GT 2 Pro, Realme GT Neo 3
         </p>
       </div>
-      <div style={{ paddingRight: "34px" }}>
+      <div className="sm-no-px" style={{ paddingRight: "34px" }}>
         <h5 className="footer-headings">Top Categories & Brands</h5>
         <p className="footer-sub-headings">NEW MOBILE PHONES IN NEPAL</p>
         <p className="footer-content">

@@ -5,13 +5,38 @@ import Footer from "../components/Footer";
 import { Year, Day, Month } from "../data/Date";
 import Facebook from "../../src/Icons/icons8-facebook-24.png";
 import Googleplus from "../../src/Icons/icons8-google-plus-50.png";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const Signup = () => {
+  const navigate = useNavigate();
+  const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [fullName, setFullName] = useState<string>("");
+  const handleUserRegistration = () => {
+    const userLists = localStorage.getItem("users");
+    const phoneReg = "[9][7-8]d{8}";
+    const passwordReg = "^(?=.*d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$";
+    const newUsers = {
+      phone: phoneNumber,
+      fullName: fullName,
+      password,
+    };
+    if (userLists) {
+      let existingUsers = JSON.parse(userLists);
+      existingUsers.push(newUsers);
+      localStorage.setItem("users", JSON.stringify(existingUsers));
+    } else {
+      let newUser: any = JSON.stringify([newUsers]);
+      localStorage.setItem("users", newUser);
+    }
+    navigate("/login");
+  };
   return (
     <>
       <Navbar />
       <div className="signup-container">
         <div className="signup-container-width m-auto pt-5 ">
-          <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center justify-content-between flex-lg-row flex-column">
             <h3 className="signup-title">Create Your Daraz Account</h3>
             <span className="login-page-link">
               Already Member?
@@ -22,33 +47,42 @@ const Signup = () => {
             </span>
           </div>
           <div className="mt-3">
-            <form action="#" className="row m-0 gx-5 gy-3 signup-form">
-              <div className="col-6">
+            <form
+              className="row m-0 gx-lg-5 gx-0 gy-3 signup-form"
+              onSubmit={handleUserRegistration}
+            >
+              <div className="col-lg-6">
                 <label htmlFor="phoneNo" className="signup-form-label d-block">
                   Phone Number *
                 </label>
                 <input
                   type="text"
+                  onChange={(e) => {
+                    setPhoneNumber(e.target.value);
+                  }}
                   className="signup-form-input"
                   placeholder="Please enter your phone number"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-lg-6">
                 <label htmlFor="fullName" className="signup-form-label d-block">
                   Full Name *
                 </label>
                 <input
                   type="text"
+                  onChange={(e) => {
+                    setFullName(e.target.value);
+                  }}
                   className="signup-form-input"
                   placeholder="Enter your first and last name"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-lg-6">
                 <label
                   htmlFor="Verification Code from WhatsApp*"
                   className="signup-form-label"
                 >
-                  Verification Code from WhatsApp *
+                  Verification Code from WhatsApp
                 </label>
                 <input
                   type="text"
@@ -61,7 +95,7 @@ const Signup = () => {
                   </Link>
                 </div>
               </div>
-              <div className="col-6">
+              <div className="col-lg-6">
                 <div className="d-flex gap-2 align-items-center pb-2">
                   <input
                     type="checkbox"
@@ -78,17 +112,20 @@ const Signup = () => {
                 </div>
                 <button className="signup-btn">SIGN UP</button>
               </div>
-              <div className="col-6">
+              <div className="col-lg-6">
                 <label htmlFor="password" className="signup-form-label d-block">
                   Password *
                 </label>
                 <input
                   type="text"
                   className="signup-form-input"
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
                   placeholder="Minimum 6 characters with a number and a letter"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-lg-6">
                 <p className="agreement">
                   By clicking "SIGN UP", I agree to Daraz's
                   <Link to="#" className="txt-blue text-decoration-none">
@@ -100,7 +137,7 @@ const Signup = () => {
                   </Link>
                 </p>
               </div>
-              <div className="col-6 d-flex gap-1">
+              <div className="col-lg-6 d-flex gap-1 flex-sm-row flex-column">
                 <div className="w-68">
                   <label htmlFor="" className="signup-form-label">
                     Birthday
@@ -145,7 +182,7 @@ const Signup = () => {
                   </select>
                 </div>
               </div>
-              <div className="col-6 ">
+              <div className="col-lg-6 ">
                 <p className="or-signup-with mb-2">Or, sign up with</p>
                 <div className="d-flex align-items-center gap-1">
                   <Link

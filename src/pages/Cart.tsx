@@ -69,8 +69,8 @@ const Cart = () => {
       >
         <div className="main">
           <div className="w-75 m-auto py-3">
-            <div className="row">
-              <div className="col-8">
+            <div className="row p-0 gx-lg-4 gx-0">
+              <div className="col-lg-8">
                 <div className="select-all-items d-flex align-items-center justify-content-between bg-light px-3">
                   {/* <span className="align-items-center d-flex gap-2">
                     <input type="checkbox" />
@@ -99,7 +99,7 @@ const Cart = () => {
                   ))}
                 </div>
               </div>
-              <div className="col-4 cart-order-summary bg-light py-3 px-3">
+              <div className="col-lg-4 cart-order-summary bg-light py-3 px-3">
                 <div>
                   <h4 className="font-weight-normal location-title pb-1">
                     Location

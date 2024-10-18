@@ -27,7 +27,7 @@ const CheckingoutProducts = () => {
   }, []);
   return (
     <div className="bg-white mt-3">
-      <div className="shipping-products-title d-flex justify-content-between">
+      <div className="shipping-products-title px-2 gap-2 gap-sm-0 d-flex justify-content-between flex-column flex-sm-row">
         <span className="checkout-package-title">Package 1 of 1</span>
         <span className="shippedby-wrapper">
           Shipped by{" "}
@@ -42,7 +42,7 @@ const CheckingoutProducts = () => {
             Choose your delivery option
           </span>
           <div
-            className="card"
+            className="card delivery-card"
             style={{ width: "300px", border: "1px solid #0094B6" }}
           >
             <div className="card-body">

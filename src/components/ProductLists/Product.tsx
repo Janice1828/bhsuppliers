@@ -6,14 +6,12 @@ const Product = ({
   img,
   id,
   listClass,
-  test,
 }: {
   title: string;
   price: number;
   img: string;
   id: number;
   listClass: string;
-  test: string;
 }) => {
   return (
     <Link to={`/productdetail?id=${id}`} className="text-decoration-none">
@@ -21,21 +19,23 @@ const Product = ({
         <div className="card-body">
           <div
             className={
-              listClass == "col-3"
+              listClass !== "col-xxl-3 col-md-6 col-12"
                 ? "card-content"
-                : "card-content d-flex justify-content-between align-items-center"
+                : "card-content d-flex justify-content-between flex-column"
             }
           >
             <div
               className={
-                listClass !== "col-3" ? "d-flex gap-3 align-items-center" : ""
+                listClass !== "col-xxl-3 col-md-6 col-12"
+                  ? "d-flex gap-3 align-items-center"
+                  : ""
               }
             >
               <img
                 src={img}
                 alt=""
                 className={
-                  listClass == "col-3"
+                  listClass !== "col-xxl-3 col-md-6 col-12"
                     ? "productlist-product-img-width-3"
                     : "productlist-product-img-full-width"
                 }

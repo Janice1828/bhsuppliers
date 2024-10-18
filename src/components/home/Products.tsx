@@ -13,7 +13,7 @@ const Products = ({
   id: number;
 }) => {
   return (
-    <div className="col-2 mt-0">
+    <div className="col-xl-2 col-lg-3 col-md-4 col-6 home-product mt-0">
       <Link to={`/productdetail?id=${id}`} className="text-decoration-none">
         <div className="row w-100 px-0 mx-0">
           <div className="card rounded-0 border-light px-0">

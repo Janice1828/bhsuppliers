@@ -11,10 +11,10 @@ const Login = () => {
       <div className="login-container pt-5">
         <div className="login-container-width m-auto m-0">
           <div className="row m-0">
-            <h3 className="login-title col-6">
+            <h3 className="login-title col-md-6">
               Welcome to Daraz! Please login.
             </h3>
-            <div className="d-flex justify-content-end  col-6">
+            <div className="d-flex justify-content-end  col-md-6">
               <span className="login-register-link">
                 New member?{" "}
                 <Link to="/signup" className="text-decoration-none txt-blue">
@@ -23,8 +23,8 @@ const Login = () => {
                 here.
               </span>
             </div>
-            <form action="" className="col-12 row m-0 login-form mt-3 gx-5">
-              <div className="col-6">
+            <form action="" className="col-12 row m-0 login-form mt-3 gx-sm-5 ">
+              <div className="col-sm-6">
                 <label htmlFor="" className="login-form-label">
                   Phone Number
                 </label>
@@ -34,16 +34,16 @@ const Login = () => {
                   placeholder="Please enter your Phone Number"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-sm-6">
                 <button className="login-btn" style={{ marginTop: "17px" }}>
                   LOGIN
                 </button>
               </div>
-              <div className="col-6"></div>
-              <div className="col-6">
+              <div className="col-sm-6"></div>
+              <div className="col-sm-6">
                 <span className="or-login-with">Or, login with</span>
               </div>
-              <div className="col-6">
+              <div className="col-sm-6">
                 <label htmlFor="" className="login-form-label">
                   Password*
                 </label>
@@ -53,7 +53,7 @@ const Login = () => {
                   placeholder="Please enter your password"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-sm-6">
                 <Link
                   to="#"
                   className="login-with-facebook justify-content-center text-decoration-none d-flex align-items-center gap-3"
@@ -63,7 +63,7 @@ const Login = () => {
                   <span>Facebook</span>
                 </Link>
               </div>
-              <div className="col-6 d-flex justify-content-end">
+              <div className="col-sm-6 d-flex justify-content-end">
                 <Link
                   to="#"
                   className="reset-password text-decoration-none txt-blue fs-12"
@@ -72,7 +72,7 @@ const Login = () => {
                   Reset Your Password
                 </Link>
               </div>
-              <div className="col-6">
+              <div className="col-sm-6">
                 <Link
                   to="#"
                   className="login-with-google justify-content-center text-decoration-none d-flex align-items-center gap-3"

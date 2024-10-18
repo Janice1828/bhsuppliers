@@ -22,9 +22,15 @@ import Youtube from "../../src/Images/youtube.png";
 import Internet from "../../src/Images/internet.png";
 const FooterLinks = () => {
   return (
-    <div className="pt-5 d-flex w-75 m-auto">
-      <div className="d-flex flex-column" style={{ paddingRight: "60px" }}>
-        <h5 className="footer-links-header" style={{ width: "240px" }}>
+    <div className="pt-5 d-flex w-75 m-auto flex-wrap flex-xl-nowrap gap-3 gap-xl-0">
+      <div
+        className="d-flex flex-column sm-no-px"
+        style={{ paddingRight: "60px" }}
+      >
+        <h5
+          className="footer-links-header sm-w-fit-content"
+          style={{ width: "240px" }}
+        >
           Customer Care
         </h5>
         <Link to="#" className="footer-links text-decoration-none text-dark">
@@ -50,8 +56,14 @@ const FooterLinks = () => {
           Code of Conduct
         </Link>
       </div>
-      <div className="d-flex flex-column" style={{ paddingRight: "60px" }}>
-        <h5 className="footer-links-header" style={{ width: "240px" }}>
+      <div
+        className="d-flex flex-column sm-no-px"
+        style={{ paddingRight: "60px" }}
+      >
+        <h5
+          className="footer-links-header sm-w-fit-content"
+          style={{ width: "240px" }}
+        >
           Daraz
         </h5>
         <Link to="#" className="footer-links text-decoration-none text-dark">
@@ -85,7 +97,10 @@ const FooterLinks = () => {
           Meet the winners
         </Link>
       </div>
-      <div style={{ paddingRight: "60px", width: "294px" }}>
+      <div
+        className="sm-no-px sm-w-fit-content"
+        style={{ paddingRight: "60px", width: "294px" }}
+      >
         <h5 className="footer-links-header w-auto">Daraz International</h5>
         <div className="row">
           <p

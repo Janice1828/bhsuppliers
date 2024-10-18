@@ -978,13 +978,11 @@ footer {
 .shippedby-wrapper {
   font-size: 12px;
   color: #757575;
-  padding-right: 15px;
 }
 .checkout-package-title {
   font-weight: bold;
   line-height: 16px;
   font-size: 14px;
-  padding-left: 15px;
 }
 .check-out-product-individual-price {
   font-size: 14px;
@@ -1019,4 +1017,40 @@ footer {
 }
 .checkout-product-details-wrapper {
   padding: 15px;
+}
+@media screen and (max-width: 992px) {
+  .signup-container-width,
+  .login-container-width {
+    width: 90%;
+  }
+  .signup-form {
+    padding: 20px;
+  }
+  .w-68,
+  .w-32 {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .sm-no-px {
+    padding: 0px !important;
+  }
+  .sm-w-fit-content {
+    width: fit-content !important;
+  }
+  .delivery-card {
+    width: 100% !important;
+  }
+  .login-form {
+    padding: 15px 0px 70px 0px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .home-product,
+  .category-product {
+    width: 100% !important;
+  }
+}
+.product-list-container {
+  width: 75%;
 }

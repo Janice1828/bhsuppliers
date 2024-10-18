@@ -2,72 +2,42 @@ import React, { useEffect } from "react";
 import Product from "./Product";
 import Grid from "../../Icons/visualization.png";
 import List from "../../Icons/list.png";
-import { useParams } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
-import { ProductListsFilterContext } from "./context/FilterContext";
-// interface Product {
-//   id: number;
-//   title: string;
-// }
-// interface newData {
-//   productProps: Product[];
-// }
-const Products = ({ data }: { data: any[] }) => {
-  const listProducts: string[] = [];
-  // console.log(data);
-  // console.log(displayingProducts);
-  // let filteredData = displayingProducts.displayingProducts;
-  // console.log(filteredData);
-  // console.log(displayingProducts.displayingProducts);
-  // const search = window.location.search;
-  // const params = new URLSearchParams(search);
-  // const id = params.get("id");
-  // const categoryName = params.get("categoryname");
-  // const { displayingProducts, setDisplayingProducts } =
-  //   ProductListsFilterContext();
-  const [sortDisplayingProducts, setSortDisplayingProducts] = useState<any[]>(
-    []
+const Products = ({
+  data,
+  updateProducts,
+}: {
+  data: any[];
+  updateProducts: any;
+}) => {
+  const [productsListView, setProductsListView] = useState<string>(
+    "col-xxl-3 col-md-6 col-12"
   );
-  const [productsListView, setProductsListView] = useState<string>("col-3");
-  // useEffect(() => {
-  //   axios.get("products_two.json").then((data) => {
-  //     const fetchedData = data.data;
-  //     const filteredCategories = fetchedData.filter((product: any) => {
-  //       if (product.category == id) {
-  //         return product;
-  //       }
-  //     });
-  //     console.log(filteredCategories);
-  // setSortDisplayingProducts(filteredCategories);
-  // setDisplayingProducts(filteredCategories);
-  //   });
-  // }, []);
   function sortProducts(event: React.ChangeEvent<HTMLSelectElement>) {
     const value: number = Number(event.target.value);
+    let sortedProducts: any[] = [];
     if (value == 1) {
-      sortDisplayingProducts.sort((a, b) => b.price - a.price);
-      // setDisplayingProducts(sortDisplayingProducts);
+      sortedProducts = data.sort((a, b) => b.price - a.price);
     } else {
-      sortDisplayingProducts.sort((a, b) => a.price - b.price);
-      setSortDisplayingProducts([...sortDisplayingProducts]);
+      sortedProducts = data.sort((a, b) => a.price - b.price);
     }
+    updateProducts(sortedProducts);
   }
   const productViewGrid = () => {
-    setProductsListView("col-3");
+    setProductsListView("col-xxl-3");
   };
   const productViewList = () => {
     setProductsListView("col-12");
   };
   return (
     <div className="row">
-      <div className="col-6">
+      <div className="col-lg-6">
         <span className="founded-items-number">
           {/* {displayingProducts.length} items found for "{`${categoryName}`}" */}
         </span>
       </div>
-      <div className="col-6 d-flex gap-3">
-        <div className="d-flex gap-1 align-items-center">
+      <div className="col-lg-6 d-flex gap-3 flex-column flex-xxl-row align-items-end align-items-xxl-center">
+        <div className="d-flex gap-1 align-items-sm-center align-items-start flex-sm-row flex-column">
           <span className="sort-by-view">Sort By:</span>
           <select className="sort-by-filter-options" onChange={sortProducts}>
             <option value="">Best Match</option>
@@ -102,7 +72,6 @@ const Products = ({ data }: { data: any[] }) => {
               img={product.images[0]}
               id={product.id}
               listClass={productsListView}
-              test=""
             />
           </div>
         ))}

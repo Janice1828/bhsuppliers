@@ -142,7 +142,7 @@ const AddedInCartProduct = ({
   };
   return (
     <>
-      <div className="d-flex justify-content-between mb-3">
+      <div className="d-flex justify-content-between mb-4 flex-column flex-sm-row gap-2 gap-sm-0">
         <div>
           <div className="d-flex align-items-center gap-2">
             {/* <input type="checkbox" onClick={selectForCheckOut} /> */}

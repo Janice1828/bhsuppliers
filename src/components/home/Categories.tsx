@@ -12,7 +12,7 @@ const Categories = ({
 }) => {
   return (
     <>
-      <div className="category-product col-2 p-0 border-none">
+      <div className="category-product col-lg-2 col-md-3 col-sm-4 col-6 p-0 border-none">
         <Link
           to={`/products?id=${id}&categoryname=${categoryName}`}
           className="text-decoration-none"

@@ -75,8 +75,8 @@ const ProductDetail = () => {
         <div className="w-75 m-auto">
           <p className="productdetail-filter-title">Fashion</p>
           <div className="row">
-            <div className="col-8">
-              <div className="d-flex gap-4">
+            <div className="col-md-8">
+              <div className="d-flex gap-4 flex-wrap">
                 <div className="">
                   <div className="productDetail-productImg">
                     <img src={productDetail.images} alt="Product Image" />
@@ -142,7 +142,6 @@ const ProductDetail = () => {
                       <span className="brand-name">No Brand</span>
                     </p>
                   </div>
-
                   <div className="productDetail-price">
                     <span className="price">${productDetail.price}</span>
                   </div>
@@ -171,7 +170,7 @@ const ProductDetail = () => {
                         </button>
                       </div>
                     </div>
-                    <div className="purchasing-btns d-flex gap-2">
+                    <div className="purchasing-btns d-flex gap-2 flex-sm-row flex-column mb-2 mb-sm-0 ">
                       <div className="buy-now text-center d-flex align-items-center justify-content-center">
                         <button
                           onClick={buyNow}
@@ -193,7 +192,7 @@ const ProductDetail = () => {
                 </div>
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-md-4">
               <div className="delivery">
                 <div className="d-flex align-items-center justify-content-between">
                   <span className="delivery-title">Delivery</span>
@@ -299,7 +298,6 @@ const ProductDetail = () => {
             <div className="col-12 mt-3">
               <p className="rating-reviews-title">Ratings & Reviews</p>
               <div className="ratings-counter d-flex">
-                <span>This product has no reviews.</span>
                 {/* <div>
                   <div className="rating-imgs">
                     <img src="" alt="" />

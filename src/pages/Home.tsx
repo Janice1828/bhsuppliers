@@ -31,18 +31,20 @@ const Home = () => {
   return (
     <>
       <div className="home-container">
-        <div className="navbar pt-0">
+        <div className="navbar pt-0  position-sticky top-0 z-3">
           <Navbar />
         </div>
         <div className="products row w-75 m-auto pt-1">
           <div className="col-md-3">
             <Filter />
           </div>
-          <div className="col-md-9 mt-3 mt-md-0 p-0">
+          <div className="col-md-9 mt-3 mt-md-0 p-0 mb-3">
             <Sale />
           </div>
           <div className="col-12 row gx-0">
-            <h3 className="home-headings col-12 px-0">Categories</h3>
+            <h3 className="home-headings col-12 px-0 text-yellow">
+              Categories
+            </h3>
             <div className="col-12 row gx-0 m-0 p-0">
               {categories.map((category) => (
                 <Categories

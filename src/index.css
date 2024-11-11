@@ -18,9 +18,10 @@
   object-fit: contain;
 }
 .nav {
-  background-color: #f85606;
+  background-color: #986a2f;
   color: #fff;
 }
+
 #nav-daraz-logo {
   width: 20px;
 }
@@ -70,15 +71,15 @@
 }
 .footer-links-header {
   font-size: 20px;
-  color: rgb(248, 86, 6);
+  color: #fff;
   line-height: 28px;
-  font-weight: 400;
+  font-weight: 500;
 }
 .footer-countries-flag {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .payment-methods {
   height: 28px;
@@ -150,12 +151,12 @@
 .home-headings {
   font-size: 22px;
   font-weight: 400;
-  color: rgb(66, 66, 66);
+  color: #986a2f;
   line-height: 38px;
 }
 .categories-title {
   font-size: 14px;
-  color: rgb(33, 33, 33);
+  color: #986a2f;
   font-weight: 400;
   line-height: 18px;
 }
@@ -201,13 +202,15 @@
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
+  /* color: #986a2f; */
 }
 
 .home-product-discounted-price {
   font-size: 18px;
   line-height: 22px;
   font-weight: 400;
-  color: rgb(248, 86, 6);
+  margin-top: 10px;
+  color: #986a2f;
 }
 .justforyou-price {
   font-size: 12px;
@@ -435,7 +438,7 @@
   padding: 15px 50px 70px 0px;
 }
 footer {
-  background: #f5f5f5;
+  background: #986a2f;
 }
 .signup-form-label,
 .login-form-label {

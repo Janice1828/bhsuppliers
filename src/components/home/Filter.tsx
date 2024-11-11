@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { FaArrowRight } from "react-icons/fa6";
+
 const Filter = () => {
   const [categoryList, setCategoryList] = useState<any[]>([]);
   useEffect(() => {
@@ -17,9 +19,10 @@ const Filter = () => {
               <li className="list-group-iem" key={key}>
                 <Link
                   to={`/products?id=${category.id}&categoryname=${category.name}`}
-                  className="text-decoration-none filter-link"
+                  className="text-decoration-none filter-link d-flex gap-2 align-items-center"
                 >
-                  {category.name}
+                  <span> {category.name}</span>{" "}
+                  <FaArrowRight style={{ color: "#986a2f" }} />
                 </Link>
               </li>
             ))}

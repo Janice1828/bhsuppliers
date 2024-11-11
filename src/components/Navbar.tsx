@@ -16,11 +16,16 @@ const Navbar = () => {
   return (
     <div className="nav pt-0 d-block w-100 pt-3 pb-3">
       <div className="w-75 m-auto">
-        <div className="nav-section mt-3 mt-lg-0 d-flex gap-4 flex-wrap flex-lg-nowrap align-items-center">
+        <div className="nav-section mt-3 mt-lg-0 d-flex gap-4 flex-wrap flex-lg-nowrap align-items-center justify-content-between">
           <Link to="/">
-            <img src={NavWhiteLogo} id="nav-daraz-white-logo" alt="" />
+            <img
+              src={NavWhiteLogo}
+              id="nav-daraz-white-logo"
+              style={{ objectFit: "cover" }}
+              alt=""
+            />
           </Link>
-          <form className="w-100" onSubmit={handleSearchProducts}>
+          <form className="w-50" onSubmit={handleSearchProducts}>
             <input
               type="text"
               onChange={(e) => {

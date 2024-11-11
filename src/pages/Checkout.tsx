@@ -4,7 +4,6 @@ import CheckingoutProducts from "../components/checkout/CheckingoutProducts";
 import Payment from "../components/checkout/Payment";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import FooterContent from "../components/FooterContent";
 
 const Checkout = () => {
   return (

@@ -7,7 +7,6 @@ const Footer = () => {
     <>
       <footer>
         <FooterLinks />
-        <FooterContent />
       </footer>
     </>
   );

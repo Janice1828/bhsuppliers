@@ -45,16 +45,6 @@ const FooterLinks = () => {
         <Link to="#" className="footer-links text-decoration-none text-dark">
           Contact Us
         </Link>
-        <h5 className="footer-links-header mt-4">Earn with Daraz</h5>
-        <Link to="#" className="footer-links text-decoration-none text-dark">
-          Daraz University
-        </Link>
-        <Link to="#" className="footer-links text-decoration-none text-dark">
-          Sell on Daraz
-        </Link>
-        <Link to="#" className="footer-links text-decoration-none text-dark">
-          Code of Conduct
-        </Link>
       </div>
       <div
         className="d-flex flex-column sm-no-px"
@@ -64,17 +54,13 @@ const FooterLinks = () => {
           className="footer-links-header sm-w-fit-content"
           style={{ width: "240px" }}
         >
-          Daraz
+          BH Suppliers
         </h5>
-        <Link to="#" className="footer-links text-decoration-none text-dark">
-          About Daraz
-        </Link>
+
         <Link to="#" className="footer-links text-decoration-none text-dark">
           Careers
         </Link>
-        <Link to="#" className="footer-links text-decoration-none text-dark">
-          Daraz Blog
-        </Link>
+
         <Link to="#" className="footer-links text-decoration-none text-dark">
           Terms & Conditions
         </Link>
@@ -84,56 +70,21 @@ const FooterLinks = () => {
         <Link to="#" className="footer-links text-decoration-none text-dark">
           Digital Payments
         </Link>
-        <Link to="#" className="footer-links text-decoration-none text-dark">
-          Daraz Customer University
-        </Link>
-        <Link to="#" className="footer-links text-decoration-none text-dark">
-          Daraz Affiliate program
-        </Link>
-        <Link to="#" className="footer-links text-decoration-none text-dark">
-          Review & Win
-        </Link>
-        <Link to="#" className="footer-links text-decoration-none text-dark">
-          Meet the winners
-        </Link>
       </div>
       <div
         className="sm-no-px sm-w-fit-content"
         style={{ paddingRight: "60px", width: "294px" }}
       >
-        <h5 className="footer-links-header w-auto">Daraz International</h5>
+        <h5 className="footer-links-header w-auto">
+          BH Suppliers International
+        </h5>
         <div className="row">
           <p
             className="footer-links d-flex align-items-center w-auto"
             style={{ gap: "7px" }}
           >
-            <img src={pakistanFlag} alt="" className="footer-countries-flag" />
-            <span>Pakistan</span>
-          </p>
-          <p
-            className="footer-links d-flex align-items-center w-auto"
-            style={{ gap: "7px" }}
-          >
-            <img
-              src={bangladeshFlag}
-              alt=""
-              className="footer-countries-flag"
-            />
-            <span>Bangladesh</span>
-          </p>
-          <p
-            className="footer-links d-flex align-items-center w-auto"
-            style={{ gap: "7px" }}
-          >
-            <img src={srilankaFlag} alt="" className="footer-countries-flag" />
-            <span>Sri Lanka</span>
-          </p>
-          <p
-            className="footer-links d-flex align-items-center w-auto"
-            style={{ gap: "7px" }}
-          >
             <img src={myanmarFlag} alt="" className="footer-countries-flag" />
-            <span>Myanmar</span>
+            <span>America</span>
           </p>
           <p
             className="footer-links d-flex align-items-center"
@@ -162,10 +113,6 @@ const FooterLinks = () => {
             <img src={imePay} alt="" className="payment-methods " />
           </Link>
         </div>
-        <h5 className="footer-links-header mt-2">Verified By</h5>
-        <div>
-          <img src={pciDss} className="footer-verifiedby-img" alt="" />
-        </div>
       </div>
       <div>
         <h5 className="footer-links-header">Exclusive Deals and Offers!</h5>
@@ -180,33 +127,14 @@ const FooterLinks = () => {
               <img src={appGallery} alt="" className="getiton-stores" />
             </div>
           </div>
-          <div className="d-flex align-items-center gap-2 mt-4 mb-5">
-            <span id="daraz-footer-logo">
-              <img src={darazLogo} alt="" className="w-100 h-100" />
-            </span>
-            <div>
-              <h5 id="happy-shopping" className="mb-0">
-                Happy Shopping
-              </h5>
-              <p id="download-app" className="mb-0">
-                Download App
-              </p>
-            </div>
-          </div>
         </div>
-        <h5 className="footer-links-header">Follow Us</h5>
+        <h5 className="footer-links-header mt-3">Follow Us</h5>
         <div className="d-flex gap-4 align-items-center">
           <Link to="#" className="footer-social-medias">
             <img src={Facebook} alt="" className="w-100 h-100" />
           </Link>
           <Link to="#" className="footer-social-medias">
             <img src={Instagram} alt="" className="w-100 h-100" />
-          </Link>
-          <Link to="#" className="footer-social-medias">
-            <img src={Youtube} alt="" className="w-100 h-100" />
-          </Link>
-          <Link to="#" className="footer-social-medias">
-            <img src={Internet} alt="" className="h-100 w-100" />
           </Link>
         </div>
       </div>

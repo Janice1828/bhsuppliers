@@ -14,42 +14,8 @@ const Navbar = () => {
     navigate(`/products?title=${productTitle}`);
   };
   return (
-    <div className="nav pt-0 d-block w-100 pb-3">
+    <div className="nav pt-0 d-block w-100 pt-3 pb-3">
       <div className="w-75 m-auto">
-        <div className="hero d-flex justify-content-between gap-3 gap-lg-0 flex-wrap flex-lg-nowrap">
-          <div className="d-flex gap-lg-4 gap-3 flex-wrap flex-lg-nowrap align-items-center">
-            <Link
-              to="#"
-              className="navbar-links text-decoration-none text-dark"
-            >
-              Become a Seller
-            </Link>
-            <Link
-              to="#"
-              className="navbar-links text-decoration-none text-dark"
-            >
-              Payments & Recharge
-            </Link>
-            <Link
-              to="#"
-              className="navbar-links text-decoration-none text-dark"
-            >
-              Help & Support
-            </Link>
-            <Link
-              to="#"
-              className="navbar-links text-decoration-none text-dark"
-            >
-              Daraz Logistics Partner
-            </Link>
-          </div>
-          <div className="d-flex align-items-center bg-dark bg-opacity-25 p-1 rounded-2 cursor-pointer">
-            <img src={NavLogo} alt="" id="nav-daraz-logo" />
-            <span className="mx-2 app-discount text-light">
-              Save More on App
-            </span>
-          </div>
-        </div>
         <div className="nav-section mt-3 mt-lg-0 d-flex gap-4 flex-wrap flex-lg-nowrap align-items-center">
           <Link to="/">
             <img src={NavWhiteLogo} id="nav-daraz-white-logo" alt="" />

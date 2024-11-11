@@ -41,9 +41,6 @@ const Home = () => {
           <div className="col-md-9 mt-3 mt-md-0 p-0">
             <Sale />
           </div>
-          <div className="col-12 pt-3 pb-3">
-            <Discount />
-          </div>
           <div className="col-12 row gx-0">
             <h3 className="home-headings col-12 px-0">Categories</h3>
             <div className="col-12 row gx-0 m-0 p-0">
@@ -57,12 +54,6 @@ const Home = () => {
               ))}
             </div>
           </div>
-          {/* <div className="col-12 mt-3">
-            <Flashsale />
-          </div> */}
-          {/* <div className="col-12 mt-3">
-            <Darazmall />
-          </div> */}
           <div className="col-12 mt-3 row gx-0 m-0">
             <h3 className="home-headings px-0">Just For You</h3>
             <div className="col-12 row gy-3 gx-2 mt-0">

@@ -37,7 +37,7 @@ const Signup = () => {
       <div className="signup-container">
         <div className="signup-container-width m-auto pt-5 ">
           <div className="d-flex align-items-center justify-content-between flex-lg-row flex-column">
-            <h3 className="signup-title">Create Your Daraz Account</h3>
+            <h3 className="signup-title">Create Your BH Suppliers Account</h3>
             <span className="login-page-link">
               Already Member?
               <Link to="/login" className="text-decoration-none">
@@ -127,7 +127,7 @@ const Signup = () => {
               </div>
               <div className="col-lg-6">
                 <p className="agreement">
-                  By clicking "SIGN UP", I agree to Daraz's
+                  By clicking "SIGN UP", I agree to BH Supplier's
                   <Link to="#" className="txt-blue text-decoration-none">
                     &nbsp;Terms of Use&nbsp;
                   </Link>

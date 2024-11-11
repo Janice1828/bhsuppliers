@@ -14,6 +14,7 @@ import { useState } from "react";
 import axios from "axios";
 import { get } from "http";
 import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
 const ProductDetail = () => {
   const navigate = useNavigate();
   const search = window.location.search;
@@ -319,8 +320,8 @@ const ProductDetail = () => {
           </div>
         </div>
       </div>
-      <div className="footer" style={{ background: "#f5f5f5" }}>
-        <FooterLinks />
+      <div className="footer">
+        <Footer />
       </div>
     </>
   );

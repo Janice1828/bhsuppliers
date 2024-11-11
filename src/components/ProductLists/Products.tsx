@@ -33,7 +33,6 @@ const Products = ({
     <div className="row">
       <div className="col-lg-6">
         <span className="founded-items-number">
-          {/* {displayingProducts.length} items found for "{`${categoryName}`}" */}
         </span>
       </div>
       <div className="col-lg-6 d-flex gap-3 flex-column flex-xxl-row align-items-end align-items-xxl-center">

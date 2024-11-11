@@ -8,7 +8,7 @@ const Category = () => {
   return (
     <div>
       <h5 className="productlist-filters-title">Category</h5>
-      <span className="categories">{categoryName}</span>
+      <span className=" ">{categoryName}</span>
     </div>
   );
 };

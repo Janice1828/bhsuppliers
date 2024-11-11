@@ -21,11 +21,13 @@
   background-color: #986a2f;
   color: #fff;
 }
-
+.text-normal {
+  color: #986a2f;
+}
 #nav-daraz-logo {
   width: 20px;
 }
-#nav-daraz-white-logo {
+#nav-bh-white-logo {
   height: 48px;
   width: 90px;
 }
@@ -239,7 +241,7 @@
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.85);
+  color: #986a2f;
   border-bottom: 1px solid #ececec;
   padding-bottom: 10px;
   margin-bottom: 15px;
@@ -365,7 +367,7 @@
   font-size: 18px;
   line-height: 27px;
   font-weight: 700;
-  color: rgb(248, 86, 6);
+  color: #986a2f;
   padding-top: 8px;
 }
 .products-vouchers button {
@@ -427,14 +429,14 @@
 }
 .signup-container,
 .login-container {
-  background: #eff0f5;
+  /* background: #eff0f5; */
 }
 .signup-form {
-  background: #fff;
+  background: #f3f3f3;
   padding: 10px 5px 70px 5px;
 }
 .login-form {
-  background-color: #fff;
+  background-color: #f3f3f3;
   padding: 15px 50px 70px 0px;
 }
 footer {
@@ -464,7 +466,7 @@ footer {
   padding: 0 36px;
   line-height: 46px;
   border-width: 1px;
-  background: #f57224;
+  background: #986a2f;
   border-color: transparent;
   border-style: solid;
   font-size: 14px;
@@ -595,7 +597,7 @@ footer {
   font-size: 30px;
   line-height: 35px;
   font-weight: 400;
-  color: rgb(248, 86, 6);
+  color: #986a2f;
 }
 .quantity {
   font-size: 14px;
@@ -640,7 +642,7 @@ footer {
   color: #fff;
 }
 .add-to-cart {
-  background-color: #f57224;
+  background-color: #986a2f;
   color: #fff;
 }
 .location-logo,
@@ -850,7 +852,7 @@ footer {
   font-size: 18px;
   line-height: 28px;
   font-weight: 500;
-  color: rgb(245, 114, 36);
+  color: #986a2f;
 }
 .cart-product-original-price {
   font-size: 14px;
@@ -901,14 +903,14 @@ footer {
   font-size: 18px;
   line-height: 16px;
   font-weight: 400;
-  color: rgb(245, 114, 36);
+  color: #986a2f;
 }
 .checkout-btn {
   height: 40px;
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
-  background-color: #f57224;
+  background-color: #986a2f;
   outline: none;
   border: none;
   color: #fff;
@@ -1005,7 +1007,7 @@ footer {
   font-size: 18px;
   line-height: 28px;
   font-weight: 500;
-  color: rgb(245, 114, 36);
+  color: #986a2f;
 }
 .checkout-product-qty {
   font-size: 14px;

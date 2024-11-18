@@ -11,6 +11,8 @@ import Users from "./admin/pages/Users";
 import Product from "./admin/pages/Product";
 import Category from "./admin/pages/Category";
 import Brand from "./admin/pages/Brand";
+import Orders from "./admin/pages/Orders";
+import Cancelledorders from "./admin/pages/Cancelledorders";
 function App() {
   return (
     <>
@@ -22,11 +24,13 @@ function App() {
         <Route Component={ProductDetail} path="/productdetail" />
         <Route Component={Cart} path="/cart" />
         <Route Component={Checkout} path="/checkout" />
-        <Route Component={Dashboard} path="/admin" />
-        <Route Component={Users} path="/customers" />
-        <Route Component={Product} path="/product" />
-        <Route Component={Category} path="/category" />
-        <Route Component={Brand} path="/brand" />
+        <Route Component={Dashboard} path="/admin/dashboard" />
+        <Route Component={Users} path="/admin/customers" />
+        <Route Component={Product} path="/admin/product" />
+        <Route Component={Category} path="/admin/category" />
+        <Route Component={Brand} path="/admin/brand" />
+        <Route Component={Orders} path="/admin/orders" />
+        <Route Component={Cancelledorders} path="/admin/cancel-order" />
       </Routes>
     </>
   );

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 const Sidebar = () => {
     return (
@@ -45,14 +46,14 @@ const Sidebar = () => {
                                 Main
                             </h6>
                             <li className="nav-item">
-                                <a
-                                    className="nav-link d-flex align-items-center gap-2 text-light"
+                                <NavLink
+                                    className={({ isActive }) => (isActive ? 'nav-link d-flex align-items-center gap-2 text-dark' : 'nav-link d-flex align-items-center gap-2 text-light')}
                                     aria-current="page"
-                                    href="#"
+                                    to="/admin/dashboard"
                                 >
                                     <i className="fa-solid fa-chart-simple sidebar-list-color"></i>
                                     <span className="sidebar-list-color"> Dashboard</span>
-                                </a>
+                                </NavLink>
                             </li>
                             <h6
                                 class="px-3 mt-2 sidebar-list-color sidebar-title-bg pt-2 mb-0"
@@ -61,14 +62,14 @@ const Sidebar = () => {
                                 Manage Users
                             </h6>
                             <li className="nav-item">
-                                <a
-                                    className="nav-link d-flex align-items-center gap-2 text-light"
+                                <NavLink
+                                    className={({ isActive }) => (isActive ? 'nav-link d-flex align-items-center gap-2 text-dark' : 'nav-link d-flex align-items-center gap-2 text-light')}
                                     aria-current="page"
-                                    href="#"
+                                    to="/admin/customers"
                                 >
                                     <i class="fa-solid fa-user"></i>
                                     <span className="sidebar-list-color">Customers</span>
-                                </a>
+                                </NavLink>
                             </li>
                             <h6
                                 class="px-3 mt-2 sidebar-list-color sidebar-title-bg pt-2 mb-0"
@@ -78,34 +79,34 @@ const Sidebar = () => {
                                 Manage Products
                             </h6>
                             <li className="nav-item">
-                                <a
-                                    className="nav-link d-flex align-items-center gap-2 text-light"
+                                <NavLink
+                                    className={({ isActive }) => (isActive ? 'nav-link d-flex align-items-center gap-2 text-dark' : 'nav-link d-flex  align-items-center gap-2 text-light')}
                                     aria-current="page"
-                                    href="#"
+                                    to="/admin/product"
                                 >
                                     <i class="fa-solid fa-box"></i>
                                     <span className="sidebar-list-color">Product</span>
-                                </a>
+                                </NavLink>
                             </li>
                             <li className="nav-item">
-                                <a
-                                    className="nav-link py-0 d-flex align-items-center gap-2 text-light"
+                                <NavLink
+                                    className={({ isActive }) => (isActive ? 'nav-link d-flex align-items-center gap-2 py-0 text-dark' : 'nav-link d-flex py-0 align-items-center gap-2 text-light')}
                                     aria-current="page"
-                                    href="#"
+                                    to="/admin/category"
                                 >
                                     <i class="fa-solid fa-list"></i>
                                     <span className="sidebar-list-color">Category</span>
-                                </a>
+                                </NavLink>
                             </li>
                             <li className="nav-item">
-                                <a
-                                    className="nav-link d-flex align-items-center gap-2 text-light"
+                                <NavLink
+                                    className={({ isActive }) => (isActive ? 'nav-link d-flex align-items-center gap-2 text-dark' : 'nav-link d-flex align-items-center gap-2 text-light')}
                                     aria-current="page"
-                                    href="#"
+                                    to="/admin/brand"
                                 >
                                     <i class="fa-brands fa-bandcamp"></i>
                                     <span className="sidebar-list-color">Brand</span>
-                                </a>
+                                </NavLink>
                             </li>
                             <h6
                                 class="px-3 mt-2 sidebar-list-color sidebar-title-bg pt-2 mb-0"
@@ -114,24 +115,24 @@ const Sidebar = () => {
                                 Manage Orders
                             </h6>
                             <li className="nav-item">
-                                <a
-                                    className="nav-link d-flex align-items-center gap-2 text-light"
+                                <NavLink
+                                    className={({ isActive }) => (isActive ? 'nav-link d-flex align-items-center gap-2 text-dark' : 'nav-link d-flex align-items-center gap-2 text-light')}
                                     aria-current="page"
-                                    href="#"
+                                    to="/admin/orders"
                                 >
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     <span className="sidebar-list-color">Orders</span>
-                                </a>
+                                </NavLink>
                             </li>
                             <li className="nav-item">
-                                <a
-                                    className="nav-link py-0 d-flex align-items-center gap-2 text-light"
+                                <NavLink
+                                    className={({ isActive }) => (isActive ? 'nav-link d-flex align-items-center gap-2 text-dark pt-0' : 'nav-link d-flex align-items-center gap-2 text-light pt-0')}
                                     aria-current="page"
-                                    href="#"
+                                    to="/admin/cancel-order"
                                 >
                                     <i class="fa-solid fa-circle-xmark"></i>
                                     <span className="sidebar-list-color">Cancelled Orders</span>
-                                </a>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>

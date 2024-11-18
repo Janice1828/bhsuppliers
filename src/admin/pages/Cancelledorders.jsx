@@ -2,7 +2,7 @@ import React from 'react'
 import Sidebar from '../components/Sidebar'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-const Product = () => {
+const Cancelledorders = () => {
     return (
         <>
             <header
@@ -50,27 +50,12 @@ const Product = () => {
                         <div className="px-md-5 px-3">
                             <div className="mb-3 row">
                                 <div className="col-12 col-sm-6">
-                                    <a
-                                        href="#"
-                                        className="text-decoration-none d-flex gap-2 align-items-center">
-                                        <div className="rounded-1 bg-custom-dark">
-                                            <i
-                                                className="fa-solid fa-plus d-flex justify-content-center align-items-center"
-                                                style={{ color: "#fff", height: "40px", width: "40px", fontSize: "25px" }}></i>
-                                        </div>
-                                        <div>
-                                            <h6
-                                                className="mb-0 text-dark"
-                                                style={{ fontWeight: "600", fontSize: "16px" }}
-                                            >
-                                                Product
-                                            </h6>
-                                            <p className="mb-0"
-                                                style={{ color: "#b9babf", fontSize: "14px" }}>
-                                                Add Product
-                                            </p>
-                                        </div>
-                                    </a>
+                                    <h3
+                                        className="mb-0"
+                                        style={{ fontWeight: "600", fontSize: "20px", color: "#986a2f" }}
+                                    >
+                                        Cancelled Orders
+                                    </h3>
                                 </div>
                             </div>
                             <div
@@ -83,23 +68,26 @@ const Product = () => {
                                                 S.No.
                                             </th>
                                             <th className="py-2 bg-custom-dark text-light text-start">
-                                                Title
+                                                Order ID
                                             </th>
                                             <th className="py-2 bg-custom-dark text-light text-start">
-                                                Brand
+                                                Ordered By
                                             </th>
+                                            <th className="py-2 bg-custom-dark text-light text-start">
+                                                Delivery Location
+                                            </th>
+
                                             <th className="py-2 bg-custom-dark text-light text-start">
                                                 Action
                                             </th>
-
-
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td className="text-start">1</td>
-                                            <td className="text-start">Sports Shoes</td>
-                                            <td className="text-start">Goldstar</td>
+                                            <td className="text-start">12343</td>
+                                            <td className="text-start">John Doe</td>
+                                            <td className="text-start">Koteshwor</td>
                                             <td>
                                                 <div className="d-flex gap-3 align-items-center">
                                                     <i class="fa-regular fa-pen-to-square text-secondary fs-6"></i><i class="text-danger fs-6 fa-solid fa-trash"></i>
@@ -120,4 +108,4 @@ const Product = () => {
     )
 }
 
-export default Product
+export default Cancelledorders

@@ -1036,6 +1036,11 @@ footer {
     width: 100% !important;
   }
 }
+@media screen and (max-width: 768px) {
+  .sidebar-h-100-vh {
+    height: 100% !important;
+  }
+}
 @media screen and (max-width: 576px) {
   .sm-no-px {
     padding: 0px !important;
@@ -1058,4 +1063,15 @@ footer {
 }
 .product-list-container {
   width: 75%;
+}
+.bg-custom-dark {
+  background: #986a2f !important;
+}
+.sidebar-h-100-vh {
+  height: 100vh;
+}
+.dt-layout-row .dt-length {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }

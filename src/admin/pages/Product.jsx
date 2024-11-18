@@ -50,8 +50,9 @@ const Product = () => {
                         <div className="px-md-5 px-3">
                             <div className="mb-3 row">
                                 <div className="col-12 col-sm-6">
+                                    {/* <button type="button" class="btn btn-primary"   data-bs-whatever="@mdo">Open modal for @mdo</button> */}
                                     <a
-                                        href="#"
+                                        href="#" type='button' data-bs-toggle="modal" data-bs-target="#exampleModal"
                                         className="text-decoration-none d-flex gap-2 align-items-center">
                                         <div className="rounded-1 bg-custom-dark">
                                             <i
@@ -71,6 +72,40 @@ const Product = () => {
                                             </p>
                                         </div>
                                     </a>
+                                    {/* Modal Start */}
+
+                                    <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div className="modal-dialog">
+                                            <div className="modal-content">
+                                                <div className="modal-header">
+                                                    <h1 className="modal-title fs-5" id="exampleModalLabel">Add New Product</h1>
+                                                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div className="modal-body">
+                                                    <form>
+                                                        <div className="mb-3">
+                                                            <label for="message-text" className="col-form-label">Title</label>
+                                                            <input type="text" className='form-control' />
+                                                        </div>
+                                                        <div className="mb-3">
+                                                            <label for="message-text" className="col-form-label">Brand</label>
+                                                            <input type="text" className='form-control' />
+                                                        </div>
+                                                        <div className="mb-3">
+                                                            <label for="message-text" className="col-form-label">Category</label>
+                                                            <input type="text" className='form-control' />
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" className="btn btn-secondary py-1 px-4" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" className="btn btn-success py-1 px-4">Add</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Modal End */}
                                 </div>
                             </div>
                             <div

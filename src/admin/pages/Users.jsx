@@ -48,30 +48,13 @@ const Users = () => {
                     >
                         <Header />
                         <div className="px-md-5 px-3">
-                            <div className="mb-3 row">
-                                <div className="col-12 col-sm-6">
-                                    <a
-                                        href="#"
-                                        className="text-decoration-none d-flex gap-2 align-items-center">
-                                        <div className="rounded-1 bg-custom-dark">
-                                            <i
-                                                className="fa-solid fa-plus d-flex justify-content-center align-items-center"
-                                                style={{ color: "#fff", height: "40px", width: "40px", fontSize: "25px" }}></i>
-                                        </div>
-                                        <div>
-                                            <h6
-                                                className="mb-0 text-dark"
-                                                style={{ fontWeight: "600", fontSize: "16px" }}
-                                            >
-                                                Customers
-                                            </h6>
-                                            <p className="mb-0"
-                                                style={{ color: "#b9babf", fontSize: "14px" }}>
-                                                Add Customers
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
+                            <div className="mb-3">
+                                <h3
+                                    className="mb-0"
+                                    style={{ fontWeight: "600", fontSize: "20px", color: "#986a2f" }}
+                                >
+                                    Customer Lists
+                                </h3>
                             </div>
                             <div
                                 className="table-responsive bg-light p-2 mt-4 small category-tbl bg-light"

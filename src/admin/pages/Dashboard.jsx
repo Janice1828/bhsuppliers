@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const Dashboard = () => {
+
   return (
     <>
       <header
@@ -63,4 +64,5 @@ const Dashboard = () => {
     </>
   )
 }
+
 export default Dashboard

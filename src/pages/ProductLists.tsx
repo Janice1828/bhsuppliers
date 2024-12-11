@@ -45,7 +45,7 @@ const ProductLists = () => {
   return (
     <>
       <Navbar />
-      <div className="row m-auto w-75">
+      <div className="row m-auto w-75 products-lists-w-75">
         <div className="col-12">
           <p className="py-2 filter-pages-list">
             Home /{" "}
@@ -60,7 +60,7 @@ const ProductLists = () => {
             categoryFilteredProducts={filteredProducts}
           />
         </div>
-        <div className="col-sm-9">
+        <div className="col-sm-9 px-0">
           <Products data={displayingData} updateProducts={setDisplayingData} />
         </div>
       </div>

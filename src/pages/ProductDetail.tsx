@@ -172,14 +172,14 @@ const ProductDetail = () => {
                       </div>
                     </div>
                     <div className="purchasing-btns d-flex gap-2 flex-sm-row flex-column mb-2 mb-sm-0 ">
-                      <div className="buy-now text-center d-flex align-items-center justify-content-center">
+                      {/* <div className="buy-now text-center d-flex align-items-center justify-content-center">
                         <button
                           onClick={buyNow}
                           className="text-light text-decoration-none outline-none border-0 bg-transparent"
                         >
                           Buy Now
                         </button>
-                      </div>
+                      </div> */}
                       <div className="add-to-cart text-center d-flex align-items-center justify-content-center">
                         <button
                           className="text-light outline-none bg-transparent border-0 "
@@ -297,7 +297,7 @@ const ProductDetail = () => {
             </div>
             <div className="col-12 bg-seconday"></div>
             <div className="col-12 mt-3">
-              <p className="rating-reviews-title">Ratings & Reviews</p>
+              {/* <p className="rating-reviews-title">Ratings & Reviews</p> */}
               <div className="ratings-counter d-flex">
                 {/* <div>
                   <div className="rating-imgs">

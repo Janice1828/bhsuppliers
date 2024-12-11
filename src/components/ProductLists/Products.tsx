@@ -30,21 +30,20 @@ const Products = ({
     setProductsListView("col-12");
   };
   return (
-    <div className="row">
-      <div className="col-lg-6">
-        <span className="founded-items-number">
-        </span>
-      </div>
-      <div className="col-lg-6 d-flex gap-3 flex-column flex-xxl-row align-items-end align-items-xxl-center">
-        <div className="d-flex gap-1 align-items-sm-center align-items-start flex-sm-row flex-column">
+    <div className="row m-0 g-0 text-center">
+      {/* <div className="col-lg-6">
+        <span className="founded-items-number"></span>
+      </div> */}
+      {/* <div className="col-lg-6 d-flex gap-3 flex-column flex-xxl-row align-items-end align-items-xxl-center"> */}
+      {/* <div className="d-flex gap-1 align-items-sm-center align-items-start flex-sm-row flex-column">
           <span className="sort-by-view">Sort By:</span>
           <select className="sort-by-filter-options" onChange={sortProducts}>
             <option value="">Best Match</option>
             <option value="0">price low to high</option>
             <option value="1">price high to low</option>
           </select>
-        </div>
-        <div className="d-flex gap-1 align-items-center">
+        </div> */}
+      {/* <div className="d-flex gap-1 align-items-center">
           <span>View:</span>
           <img
             src={Grid}
@@ -59,10 +58,10 @@ const Products = ({
             onClick={productViewList}
             className="product-view-order cursor-pointer"
           />
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
       <div className="col-12 border-1"></div>
-      <div className="col-12 row">
+      <div className="col-12 row gx-0">
         {data.map((product) => (
           <div className={`${productsListView}`} key={product.id}>
             <Product

@@ -1054,6 +1054,10 @@ footer {
   .login-form {
     padding: 15px 0px 70px 0px;
   }
+  .products-lists-w-75 {
+    width: 95% !important;
+    margin: auto !important;
+  }
 }
 @media screen and (max-width: 420px) {
   .home-product,

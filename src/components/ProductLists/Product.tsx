@@ -42,11 +42,11 @@ const Product = ({
               />
               <div className="" style={{ padding: "2px 0px 5px 0px" }}>
                 <p className="productlist-product-title mb-0">{title}</p>
-                <div className="d-flex gap-2 align-items-center my-1">
+                <div className="d-flex gap-2 align-items-center my-1 justify-content-center">
                   <span className="productlist-products-rating">4/5(220)</span>
                   <span className="productlist-sold-numbers">4k sold</span>
                 </div>
-                <div className="d-flex mt-1 align-items-center gap-2 products-vouchers">
+                <div className="d-flex mt-1 align-items-center gap-2 products-vouchers justify-content-center">
                   <button>Free Delivery</button>
                   <button>5 Vouchers</button>
                 </div>
